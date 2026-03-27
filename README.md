@@ -93,3 +93,5 @@ Maze 30x30
 ```bash
 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 torchrun --nproc-per-node 8 train.py --config-name tuned_hrm data=maze
 ```
+
+For 3-SAT, please switch to `SAT` branch to train.
