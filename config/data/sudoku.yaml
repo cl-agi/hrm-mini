@@ -1,0 +1,4 @@
+name: sudoku
+dataset_name: ./downloaded-datasets/sudoku-extreme-1k
+repeat: 200
+augment: True
