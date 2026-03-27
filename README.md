@@ -33,7 +33,7 @@ hf download --repo-type dataset --local-dir ./downloaded-datasets/sudoku-extreme
 Run the commands below to load trained Sudoku checkpoint for the dynamics analysis.
 
 ```bash
-hf download --repo-type model --local-dir ./checkpoints/1000_tuned_hrm_new hexmage/hrm-mini
+hf download --repo-type model --local-dir ./checkpoints/1000_tuned_hrm_new cl-agi/hrm-mini
 ```
 
 ## Note: Running on a single GPU
