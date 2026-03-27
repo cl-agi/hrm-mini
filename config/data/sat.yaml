@@ -1,5 +1,5 @@
 name: sat
-dataset_name: hexmage/3SAT_256
+dataset_name: cl-agi/3SAT_256
 num_variables: 256
 max_clauses: 1152
 repeat: 20
