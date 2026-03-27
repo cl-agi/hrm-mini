@@ -1,3 +1,5 @@
 name: maze
 dataset_name: ./downloaded-datasets/maze-30x30-hard-1k
 repeat: 25
+eval_splits:
+  - test

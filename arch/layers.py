@@ -1,4 +1,4 @@
-from typing import Sequence
+from typing import Optional, Sequence
 import math
 
 import torch
@@ -101,7 +101,7 @@ class Attention(nn.Module):
         self.qkv_proj = CastedLinear(hidden_size, self.num_heads * self.head_dim, bias=False, batch_output_dims=(3, ), **kwargs)
         self.o_proj = CastedLinear(head_dim * num_heads, hidden_size, bias=False, **kwargs)
 
-    def forward(self, hidden_states: Tensor, cos_sin: CosSin) -> Tensor:
+    def forward(self, hidden_states: Tensor, cos_sin: CosSin, attn_mask: Optional[Tensor] = None) -> Tensor:
         # hidden_states, qkv: [..., seq_len, hidden_size]
         qkv = self.qkv_proj(hidden_states)
 
@@ -113,7 +113,13 @@ class Attention(nn.Module):
         key = apply_rotary_pos_emb(key, cos_sin)
         # PyTorch SDPA attention
         # query, key, value: [... x seq_len x num_heads x head_dim]
-        attn_output = F.scaled_dot_product_attention(query.transpose(-2, -3), key.transpose(-2, -3), value.transpose(-2, -3), is_causal=self.is_causal).transpose(-2, -3)
+        attn_output = F.scaled_dot_product_attention(
+            query.transpose(-2, -3),
+            key.transpose(-2, -3),
+            value.transpose(-2, -3),
+            attn_mask=attn_mask,
+            is_causal=self.is_causal,
+        ).transpose(-2, -3)
         # attn_output: [..., seq_len, num_heads, head_dim]
         attn_output = rearrange(attn_output, "... h hd -> ... (h hd)")
         return self.o_proj(attn_output)
@@ -146,7 +152,7 @@ class TransformerBlock(nn.Module):
                 hidden_size=config.hidden_size,
                 head_dim=config.head_dim,
                 num_heads=config.hidden_size // config.head_dim,
-                is_causal=config.is_causal
+                is_causal=config.is_causal,
             )
             self.mlp = MLP(
                 hidden_size=config.hidden_size,
@@ -155,13 +161,13 @@ class TransformerBlock(nn.Module):
 
         self.norm = lambda x: F.rms_norm(x, (x.shape[-1], ), eps=config.norm_eps)
 
-    def forward(self, x: Tensor, **kwargs) -> Tensor:  # PostNorm
+    def forward(self, x: Tensor, attn_mask: Optional[Tensor] = None, **kwargs) -> Tensor:  # PostNorm
         if self.is_mlp_mixer:
             x = x.transpose(-1, -2)
             x = self.norm(x + self.mlp_t(x))
             x = x.transpose(-1, -2)
         else:
-            x = self.norm(x + self.attn(x, **kwargs))
+            x = self.norm(x + self.attn(x, attn_mask=attn_mask, **kwargs))
         return self.norm(x + self.mlp(x))
 
 class Transformer(nn.Module):
@@ -171,9 +177,9 @@ class Transformer(nn.Module):
 
         self.layers = nn.ModuleList([TransformerBlock(config) for _layer_idx in range(config.num_layers)])
 
-    def forward(self, h: Tensor) -> Tensor:
+    def forward(self, h: Tensor, attn_mask: Optional[Tensor] = None) -> Tensor:
         cos_sin = self.rotary_emb()
 
         for layer in self.layers:
-            h = layer(h, cos_sin=cos_sin)
+            h = layer(h, attn_mask=attn_mask, cos_sin=cos_sin)
         return h

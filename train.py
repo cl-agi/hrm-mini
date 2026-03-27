@@ -59,10 +59,24 @@ def load_module(identifier: str):
     return getattr(module, class_name)
 
 # [Training and Inference Step]
-def train_step(model: nn.Module, carry: Carry, opt: torch.optim.Optimizer, x: Tensor, y: Tensor):
-    carry, y_hat = model(carry, x)
+def train_step(
+    model: nn.Module,
+    carry: Carry,
+    opt: torch.optim.Optimizer,
+    x: Tensor,
+    y: Tensor,
+    y_mask: Optional[Tensor] = None,
+    attn_mask: Optional[Tensor] = None,
+):
+    carry, y_hat = model(carry, x, attn_mask=attn_mask)
     # loss (f32 for CrossEntropy)
-    loss = F.cross_entropy(y_hat.view(-1, y_hat.shape[-1]).to(torch.float32), y.view(-1).long(), reduction="mean")
+    if y_mask is not None:
+        loss = F.cross_entropy(y_hat.view(-1, y_hat.shape[-1]).to(torch.float32), y.view(-1).long(), reduction="none")
+        loss = loss * y_mask.view(-1)
+        loss = loss.sum() / y_mask.sum()
+    else:
+        loss = F.cross_entropy(y_hat.view(-1, y_hat.shape[-1]).to(torch.float32), y.view(-1).long(), reduction="mean")
+
     loss.backward()
     opt.step()
     opt.zero_grad()
@@ -70,6 +84,9 @@ def train_step(model: nn.Module, carry: Carry, opt: torch.optim.Optimizer, x: Te
     # metrics
     with torch.no_grad():
         preds = torch.argmax(y_hat, dim=-1)
+        if y_mask is not None:
+            preds = preds * y_mask
+            y = y * y_mask
         metrics = {
             "loss": loss.detach(),
             "per_position_accuracy": torch.mean(preds == y, dtype=torch.float32),
@@ -79,9 +96,17 @@ def train_step(model: nn.Module, carry: Carry, opt: torch.optim.Optimizer, x: Te
     return carry, metrics
 
 @torch.inference_mode()
-def run_inference(model: nn.Module, carry: Carry, x: Tensor):
-    carry, y_hat = model(carry, x)
+def run_inference(model: nn.Module, carry: Carry, x: Tensor, attn_mask: Optional[Tensor] = None):
+    carry, y_hat = model(carry, x, attn_mask=attn_mask)
     return carry, torch.argmax(y_hat, dim=-1)
+
+
+def unpack_batch(batch: Any) -> tuple[Tensor, Tensor, Optional[Tensor], Optional[Tensor]]:
+    if isinstance(batch, dict):
+        return batch["x"], batch["y"], batch.get("y_mask"), batch.get("attn_mask")
+    if isinstance(batch, (tuple, list)) and len(batch) == 2:
+        return batch[0], batch[1], None, None
+    raise TypeError(f"Unsupported batch type: {type(batch)!r}")
 
 def update_lr(config: TrainConfig, optim: torch.optim.Optimizer, step: int, total_steps: int) -> float:
     # Linear warmup cosine schedule
@@ -106,8 +131,13 @@ def train_single_seed(config: TrainConfig, seed: int, group_name: str, WORLD_SIZ
 
     # Initialize Dataloader
     create_dataloader = load_module(f"dataset.{config.data.name}@create_dataloader")
-    train_loader, train_metadata = create_dataloader("train", config.local_batch_size, rank=RANK, world_size=WORLD_SIZE, seed=seed, **config.data.__pydantic_extra__)  # pyright: ignore[reportCallIssue]
-    eval_loaders = {split_name: create_dataloader(split_name, config.local_batch_size, rank=RANK, world_size=WORLD_SIZE, seed=seed, **config.data.__pydantic_extra__)[0] for split_name in ["test_hard"]}  # pyright: ignore[reportCallIssue]
+    data_extra = dict(config.data.__pydantic_extra__ or {})
+    eval_splits = data_extra.pop("eval_splits", ["test_hard"])
+    train_loader, train_metadata = create_dataloader("train", config.local_batch_size, rank=RANK, world_size=WORLD_SIZE, seed=seed, **data_extra)  # pyright: ignore[reportCallIssue]
+    eval_loaders = {
+        split_name: create_dataloader(split_name, config.local_batch_size, rank=RANK, world_size=WORLD_SIZE, seed=seed, **data_extra)[0]
+        for split_name in eval_splits
+    }  # pyright: ignore[reportCallIssue]
 
     total_steps = int(config.cycles_per_data * len(train_loader) * config.epochs)
 
@@ -152,9 +182,14 @@ def train_single_seed(config: TrainConfig, seed: int, group_name: str, WORLD_SIZ
     step = 0
     for epoch in range(config.epochs):
         model.train()
-        for x, y in train_loader:
+        for batch in train_loader:
+            x, y, y_mask, attn_mask = unpack_batch(batch)
             x = x.cuda()
             y = y.cuda()
+            if y_mask is not None:
+                y_mask = y_mask.cuda()
+            if attn_mask is not None:
+                attn_mask = attn_mask.cuda()
 
             metrics = {}
             lr = None
@@ -163,13 +198,13 @@ def train_single_seed(config: TrainConfig, seed: int, group_name: str, WORLD_SIZ
                 step += 1
                 lr = update_lr(config, optim, step, total_steps)
 
-                carry, metrics = train_step(model, carry, optim, x, y)
+                carry, metrics = train_step(model, carry, optim, x, y, y_mask=y_mask, attn_mask=attn_mask)
 
             if RANK == 0 and progress_bar is not None and step - progress_bar.n >= config.log_interval:
                 progress_bar.update(step - progress_bar.n)
                 wandb.log({f"train/{k}": v.item() for k, v in metrics.items()} | {"train/lr": lr}, step=step)
 
-            del x, y, carry, metrics
+            del x, y, y_mask, attn_mask, carry, metrics
 
         # Eval
         model.eval()
@@ -182,17 +217,24 @@ def train_single_seed(config: TrainConfig, seed: int, group_name: str, WORLD_SIZ
 
         for eval_name, eval_loader in eval_loaders.items():
             num_total_correct = torch.zeros(2, dtype=torch.long, device="cuda")
-            for x, y in eval_loader:
+            for batch in eval_loader:
+                x, y, y_mask, attn_mask = unpack_batch(batch)
                 # Run inference
                 carry: Carry = model.module.initial_carry
                 y_hat = None
                 for _ in range(config.cycles_per_data):
-                    carry, y_hat = run_inference(model, carry, x.cuda())
+                    carry, y_hat = run_inference(model, carry, x.cuda(), attn_mask.cuda() if attn_mask is not None else None)
 
-                num_total_correct[0] += torch.all(y_hat == y.cuda(), dim=-1).sum()
+                target = y.cuda()
+                if y_mask is not None:
+                    mask = y_mask.cuda()
+                    y_hat = y_hat * mask
+                    target = target * mask
+
+                num_total_correct[0] += torch.all(y_hat == target, dim=-1).sum()
                 num_total_correct[1] += y.shape[0]
 
-                del carry, y_hat
+                del x, y, y_mask, attn_mask, carry, y_hat, target
 
             # Reduce and log
             dist.reduce(num_total_correct, dst=0)

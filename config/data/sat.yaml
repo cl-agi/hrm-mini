@@ -1,0 +1,9 @@
+name: sat
+dataset_name: hexmage/3SAT_256
+num_variables: 256
+max_clauses: 1152
+repeat: 20
+augment: false
+num_workers: 8
+eval_splits:
+  - test

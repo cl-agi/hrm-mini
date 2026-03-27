@@ -26,6 +26,7 @@ The following commands pulls the required datasets from HuggingFace repositories
 mkdir downloaded-datasets
 hf download --repo-type dataset --local-dir ./downloaded-datasets/maze-30x30-hard-1k sapientinc/maze-30x30-hard-1k
 hf download --repo-type dataset --local-dir ./downloaded-datasets/sudoku-extreme-1k sapientinc/sudoku-extreme-1k
+hf download --repo-type dataset --local-dir ./downloaded-datasets/3sat-256-1k hexmage/3SAT_256
 ```
 
 ## Download checkpoints (optional)
@@ -92,4 +93,10 @@ Maze 30x30
 
 ```bash
 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 torchrun --nproc-per-node 8 train.py --config-name tuned_hrm data=maze
+```
+
+3-SAT 256
+
+```bash
+OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 torchrun --nproc-per-node 8 train.py --config-name tuned_hrm_sat
 ```
