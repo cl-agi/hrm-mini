@@ -22,7 +22,7 @@ wandb login
 
 ## Launch main experiment
 
-3-SAT 256 with 1000 examples. Internet connection is required to download dataset.
+3-SAT 256 with 1000 examples. Internet connection is required to download the dataset.
 
 If your VRAM is not sufficient, you can reduce `local_batch_size` in `config/tuned_hrm_sat.yaml`.
 
