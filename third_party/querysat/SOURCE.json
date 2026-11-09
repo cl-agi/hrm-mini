@@ -1,0 +1,236 @@
+{
+  "snapshot": "provenance/source-a5a4ed2b20d0b922/code",
+  "adaptations": "Internal imports namespaced; experiment output defaults under exp; CNFgen 0.9.5 signed integer clauses consumed directly. Numerical model definitions unchanged. CLI freezes run seed/configuration before model/data construction and requires weights for evaluation.",
+  "source_files": {
+    "main.py": {
+      "source": "provenance/source-20d40ebe77569f9f/main.py",
+      "source_sha256": "2c3911c42e2032d3d1fef7168c33debbeac46ca98fc1141c34a3af4eb7ca4fea",
+      "vendored_sha256": "802f2d007a58d26eb60c9f43c5602aca383b0c2bac1f78c6e6ddf142790eb949"
+    },
+    "config.py": {
+      "source": "provenance/source-057e84f91d5a91e1/config.py",
+      "source_sha256": "b18adfdab2e788325328daef2ba36e97170c2d3fdedae64e4114922d095541a0",
+      "vendored_sha256": "3d57d504e13d7ad29b5ababe98f060d81bdea1f7169142a655cec0eb615ecc85"
+    },
+    "evaluate_solvers.py": {
+      "source": "provenance/source-054918eb4b292f53/evaluate_solvers.py",
+      "source_sha256": "9f77996da9a886ca5e97bc2774e457b8d44acbfd60d362a5a4e98732129d2b64",
+      "vendored_sha256": "f431a42c47785cb7fde44cef8a9e6a182522fa5ff119cd79728e295038f34b37"
+    },
+    "registry/registry.py": {
+      "source": "provenance/source-e30be1c361e91bcf/registry.py",
+      "source_sha256": "c872c45ceda59c17fd75e0dbbfb04f34177e74a0a4b13057871f16a914807cb6",
+      "vendored_sha256": "49462dd6597350b9d5a37e406b6aea94b84ccc4f4acc14687bcbc36262a3a8a3"
+    },
+    "metrics/sat_metrics.py": {
+      "source": "provenance/source-b9a5ed0f5102eb07/sat_metrics.py",
+      "source_sha256": "030273964e534d198a54f9688b814d2352a618fd0b725688c6b9286908f19794",
+      "vendored_sha256": "3cf74c21bb4713090c5da84c832e08a847c38f9ca9798baf7df6638e3a183306"
+    },
+    "metrics/base.py": {
+      "source": "provenance/source-c0a03d29f1da5667/base.py",
+      "source_sha256": "2a77afbba6473ff295b42e7420223047472e1cd03b03f0b6d23683b4b3cf372e",
+      "vendored_sha256": "2a77afbba6473ff295b42e7420223047472e1cd03b03f0b6d23683b4b3cf372e"
+    },
+    "utils/parameters_log.py": {
+      "source": "provenance/source-df0d35190c541a3f/parameters_log.py",
+      "source_sha256": "67957e27d0dafdd4891fc9e7cdd91ff677e298b894f3444db934f4b001d91d6e",
+      "vendored_sha256": "67957e27d0dafdd4891fc9e7cdd91ff677e298b894f3444db934f4b001d91d6e"
+    },
+    "utils/iterable.py": {
+      "source": "provenance/source-108df0c3c221ff17/iterable.py",
+      "source_sha256": "41042f35cb4c08a0ddf793c3704f89511850856ca2403a282296135a3fc65928",
+      "vendored_sha256": "41042f35cb4c08a0ddf793c3704f89511850856ca2403a282296135a3fc65928"
+    },
+    "utils/sat.py": {
+      "source": "provenance/source-36c77ae0053f4874/sat.py",
+      "source_sha256": "a5b89145c27ed2c7ff945b2bd21517cb9f329664049128fd86b30fec409406e3",
+      "vendored_sha256": "e1993d409c96d73d98e3d4a536b9cea0a3bcf0a4470ade8b43692223b253b28e"
+    },
+    "utils/create_test_folders.py": {
+      "source": "provenance/source-1daac2b8fa9e363b/create_test_folders.py",
+      "source_sha256": "cc2214506edafcd724309181972a5d36406afcb825a104ef0486c58df7ce884b",
+      "vendored_sha256": "cc2214506edafcd724309181972a5d36406afcb825a104ef0486c58df7ce884b"
+    },
+    "utils/visualization.py": {
+      "source": "provenance/source-11f90c0a351a6866/visualization.py",
+      "source_sha256": "22f46c305eadf1fdfe172b2f3b8393311caa666aa0d9ddef304408cda3bee204",
+      "vendored_sha256": "22f46c305eadf1fdfe172b2f3b8393311caa666aa0d9ddef304408cda3bee204"
+    },
+    "utils/measure.py": {
+      "source": "provenance/source-bd3bfc366753af16/measure.py",
+      "source_sha256": "d47adb5852f1afd934ea7e59fc58bea9d1a43c82da5e7f7888abadc70c325a2e",
+      "vendored_sha256": "d47adb5852f1afd934ea7e59fc58bea9d1a43c82da5e7f7888abadc70c325a2e"
+    },
+    "layers/normalization.py": {
+      "source": "provenance/source-c1ea178cb3b352c8/normalization.py",
+      "source_sha256": "1ffa8a4d51dd69ef7d7de0de19e378e852915d4782259ca791e95f8866ff8c22",
+      "vendored_sha256": "1ffa8a4d51dd69ef7d7de0de19e378e852915d4782259ca791e95f8866ff8c22"
+    },
+    "loss/sat.py": {
+      "source": "provenance/source-aaaad7176025e902/sat.py",
+      "source_sha256": "f73b9cbbdf9933e67ce016d54e642ce8c3c39bcfa1282ca38871544ce81972ed",
+      "vendored_sha256": "f73b9cbbdf9933e67ce016d54e642ce8c3c39bcfa1282ca38871544ce81972ed"
+    },
+    "model/neurocore_query.py": {
+      "source": "provenance/source-4724b0fe667e11f1/neurocore_query.py",
+      "source_sha256": "e5cedcf60ae525fec956fe08c60043a485fd137f26e55067587ed82a159635b0",
+      "vendored_sha256": "9546fe0bdee04a96ee3bca692f937686cd2ede86729738dba03b32a163e750f5"
+    },
+    "model/neurocore.py": {
+      "source": "provenance/source-8116a16b35235b99/neurocore.py",
+      "source_sha256": "7d5d46b27ba8ab707a9adacadd2cf7f59663512b4723469de4cbfcc97d5b949a",
+      "vendored_sha256": "1e341f4f4b87957f721b85d9d013501667e0889fae9a0d0e55ddd39900a04128"
+    },
+    "model/querysat.py": {
+      "source": "provenance/source-8015ac2f0fdd168a/querysat.py",
+      "source_sha256": "89f026467f5f689d2dc1cf75d56c216cb05642bd8cab8bb384f0f0be600e6985",
+      "vendored_sha256": "141bf8914a32472a87988159b5aa74e6df1ab74c65662c4112344a643faa7462"
+    },
+    "model/mlp.py": {
+      "source": "provenance/source-cd129462c6f6a57d/mlp.py",
+      "source_sha256": "62e18d72c4e90110f37a0ccb1f6730989fa1f55db70e81b6e7a88941eb285123",
+      "vendored_sha256": "62e18d72c4e90110f37a0ccb1f6730989fa1f55db70e81b6e7a88941eb285123"
+    },
+    "data/SHAGen2019.py": {
+      "source": "provenance/source-f5b8141d12499b8c/SHAGen2019.py",
+      "source_sha256": "710844cc14b2cee6151ae5a3f3d7e0361f6d27569d207138cdc342ef61067118",
+      "vendored_sha256": "ac97ebd4bdc9afd800e29b6a673c81b7f2966670d12f0ef5d50b28b15d944602"
+    },
+    "data/CNFGen.py": {
+      "source": "provenance/source-252c3ea8bfb86edb/CNFGen.py",
+      "source_sha256": "2a6fc81938fa13114542f832eaaf01d716adbcdf89fe6401d819121d6c417a24",
+      "vendored_sha256": "44ec32c87ff735104b475e57cfd9e5c8af70868c1bd0e12bf95f54c95887c80c"
+    },
+    "data/dimac.py": {
+      "source": "provenance/source-0270f954a71cdd75/dimac.py",
+      "source_sha256": "d5c3c1f90a7045f8aaf1ff5f92e032f612a0403c46207f3ecb3dc85d630236da",
+      "vendored_sha256": "fdf915d898da2ba9cd4d286b1fb6b938da09707441d1746d9c2c1df5c848598d"
+    },
+    "data/dataset.py": {
+      "source": "provenance/source-540b4adade5a3a68/dataset.py",
+      "source_sha256": "c683e84266e534e854b9c14f8a894a0da43696d3f536e045e52cd41986e5fc8a",
+      "vendored_sha256": "c683e84266e534e854b9c14f8a894a0da43696d3f536e045e52cd41986e5fc8a"
+    },
+    "data/k_sat.py": {
+      "source": "provenance/source-f865d7be66d14909/k_sat.py",
+      "source_sha256": "b9a7141a8710d19dac0d16ee2bb18ea3642c0c0edc8787942dbefb5db8e7fd74",
+      "vendored_sha256": "21cd07d2d37b820feeccc42772e5f98ec0e5688f06591cf60ac9309ef4ef605a"
+    },
+    "optimization/AdaBelief.py": {
+      "source": "provenance/source-3cb109d407f60f4b/AdaBelief.py",
+      "source_sha256": "98ebc29f08b1d763099ab2fad930d1df58442cd0c419ee3f1773ccde16b34387",
+      "vendored_sha256": "98ebc29f08b1d763099ab2fad930d1df58442cd0c419ee3f1773ccde16b34387"
+    },
+    "observed_model.py": {
+      "source": "provenance/source-37b8d992d0a12e84/observed_model.py",
+      "source_sha256": "09d5d2d1a3eaa7c19e54793fbee9e7eecf1c4964296980b1eaaaac363a353b63",
+      "vendored_sha256": "8ecaf13c56d5a86eb2015b11758367d7689a889ac1854e11ec3ad4f11d489f45"
+    },
+    "trajectory_model.py": {
+      "source": "provenance/source-2a6c180230533fd1/trajectory_model.py",
+      "source_sha256": "149690bab58c4b8f9e07ecbfee502e5b43635c3e98d60662e0f348c77877af8d",
+      "vendored_sha256": "52f62e26b0e0af73f1d83bd40f27b3905b6b158c2c137ce785ad6f30139944af"
+    }
+  },
+  "upstream": "https://github.com/LUMII-Syslab/QuerySAT.git",
+  "upstream_commit": "3c1c3b10362ca62b0841e945b72921dbc30d9c88",
+  "note": "Inference snapshot includes local compatibility changes; upstream commit alone does not describe these changes.",
+  "files": {
+    "LICENSE": "b638ce2f4b57006dd4ba2b1f35a9cd56d553758d7c6f21bb020fbc980eb017ea",
+    "pyproject.toml": "03b6583477ec58c0c5b86fe3ad0ae24475b86b32d1f0a225f18e45425318f6e6",
+    "readme.md": "33cd06daf7e832fc89a3a0348fe9b409c83b9e559f973d5dffd6353b409a571f",
+    "src/hrm_querysat/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/config.py": "3d57d504e13d7ad29b5ababe98f060d81bdea1f7169142a655cec0eb615ecc85",
+    "src/hrm_querysat/data/CNFGen.py": "44ec32c87ff735104b475e57cfd9e5c8af70868c1bd0e12bf95f54c95887c80c",
+    "src/hrm_querysat/data/SHAGen2019.py": "ac97ebd4bdc9afd800e29b6a673c81b7f2966670d12f0ef5d50b28b15d944602",
+    "src/hrm_querysat/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/data/dataset.py": "c683e84266e534e854b9c14f8a894a0da43696d3f536e045e52cd41986e5fc8a",
+    "src/hrm_querysat/data/dimac.py": "fdf915d898da2ba9cd4d286b1fb6b938da09707441d1746d9c2c1df5c848598d",
+    "src/hrm_querysat/data/k_sat.py": "21cd07d2d37b820feeccc42772e5f98ec0e5688f06591cf60ac9309ef4ef605a",
+    "src/hrm_querysat/evaluate_solvers.py": "f431a42c47785cb7fde44cef8a9e6a182522fa5ff119cd79728e295038f34b37",
+    "src/hrm_querysat/layers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/layers/normalization.py": "1ffa8a4d51dd69ef7d7de0de19e378e852915d4782259ca791e95f8866ff8c22",
+    "src/hrm_querysat/loss/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/loss/sat.py": "f73b9cbbdf9933e67ce016d54e642ce8c3c39bcfa1282ca38871544ce81972ed",
+    "src/hrm_querysat/main.py": "802f2d007a58d26eb60c9f43c5602aca383b0c2bac1f78c6e6ddf142790eb949",
+    "src/hrm_querysat/metrics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/metrics/base.py": "2a77afbba6473ff295b42e7420223047472e1cd03b03f0b6d23683b4b3cf372e",
+    "src/hrm_querysat/metrics/sat_metrics.py": "3cf74c21bb4713090c5da84c832e08a847c38f9ca9798baf7df6638e3a183306",
+    "src/hrm_querysat/model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/model/mlp.py": "62e18d72c4e90110f37a0ccb1f6730989fa1f55db70e81b6e7a88941eb285123",
+    "src/hrm_querysat/model/neurocore.py": "1e341f4f4b87957f721b85d9d013501667e0889fae9a0d0e55ddd39900a04128",
+    "src/hrm_querysat/model/neurocore_query.py": "9546fe0bdee04a96ee3bca692f937686cd2ede86729738dba03b32a163e750f5",
+    "src/hrm_querysat/model/querysat.py": "141bf8914a32472a87988159b5aa74e6df1ab74c65662c4112344a643faa7462",
+    "src/hrm_querysat/observed_model.py": "8ecaf13c56d5a86eb2015b11758367d7689a889ac1854e11ec3ad4f11d489f45",
+    "src/hrm_querysat/optimization/AdaBelief.py": "98ebc29f08b1d763099ab2fad930d1df58442cd0c419ee3f1773ccde16b34387",
+    "src/hrm_querysat/optimization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/registry/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/registry/registry.py": "49462dd6597350b9d5a37e406b6aea94b84ccc4f4acc14687bcbc36262a3a8a3",
+    "src/hrm_querysat/trajectory_model.py": "52f62e26b0e0af73f1d83bd40f27b3905b6b158c2c137ce785ad6f30139944af",
+    "src/hrm_querysat/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/utils/create_test_folders.py": "cc2214506edafcd724309181972a5d36406afcb825a104ef0486c58df7ce884b",
+    "src/hrm_querysat/utils/iterable.py": "41042f35cb4c08a0ddf793c3704f89511850856ca2403a282296135a3fc65928",
+    "src/hrm_querysat/utils/measure.py": "d47adb5852f1afd934ea7e59fc58bea9d1a43c82da5e7f7888abadc70c325a2e",
+    "src/hrm_querysat/utils/parameters_log.py": "67957e27d0dafdd4891fc9e7cdd91ff677e298b894f3444db934f4b001d91d6e",
+    "src/hrm_querysat/utils/sat.py": "e1993d409c96d73d98e3d4a536b9cea0a3bcf0a4470ade8b43692223b253b28e",
+    "src/hrm_querysat/utils/visualization.py": "22f46c305eadf1fdfe172b2f3b8393311caa666aa0d9ddef304408cda3bee204",
+    "src/hrm_querysat/run_config.py": "72b5919ff14e2961738de9dbe4eefffb6e551baed9b51b818dd33f77c15c8a73"
+  },
+  "excluded_plotting_files": {
+    "utils/sat_visualizer.py": {
+      "source": "provenance/source-7bcdd7bdbb62e4f8/sat_visualizer.py",
+      "source_sha256": "411aa4dce0cbdc25e2baa143b1d9e0d1bcd2167a6e094b550ef95d8205acdd2a",
+      "vendored_sha256": "45210ed471417526514f135edeb4cdaf95ac580ef0d5324ed7e1eeb2a580756a"
+    },
+    "utils/summary.py": {
+      "source": "provenance/source-8ef9c3ec36e10624/summary.py",
+      "source_sha256": "b31a6aa28a116f156c738f5d3a26680713408ee6caed1e61c78d9b71657c3a67",
+      "vendored_sha256": "b31a6aa28a116f156c738f5d3a26680713408ee6caed1e61c78d9b71657c3a67"
+    }
+  },
+  "current_files": {
+    "LICENSE": "b638ce2f4b57006dd4ba2b1f35a9cd56d553758d7c6f21bb020fbc980eb017ea",
+    "pyproject.toml": "e159e35307ae3ed040011ca22c222b86fd36f9c31015e947d29ccdf7113731de",
+    "readme.md": "d50892fce0dc5895f57d3ba0c7db5e5b1d00d67aae76cc6d86cd8311e430e586",
+    "src/hrm_querysat/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/config.py": "9f960c618f3c939d41621231b73cd456a614659fd7f839ccb5bddb4124e12748",
+    "src/hrm_querysat/data/CNFGen.py": "44ec32c87ff735104b475e57cfd9e5c8af70868c1bd0e12bf95f54c95887c80c",
+    "src/hrm_querysat/data/SHAGen2019.py": "ac97ebd4bdc9afd800e29b6a673c81b7f2966670d12f0ef5d50b28b15d944602",
+    "src/hrm_querysat/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/data/dataset.py": "c683e84266e534e854b9c14f8a894a0da43696d3f536e045e52cd41986e5fc8a",
+    "src/hrm_querysat/data/dimac.py": "fdf915d898da2ba9cd4d286b1fb6b938da09707441d1746d9c2c1df5c848598d",
+    "src/hrm_querysat/data/k_sat.py": "21cd07d2d37b820feeccc42772e5f98ec0e5688f06591cf60ac9309ef4ef605a",
+    "src/hrm_querysat/evaluate_solvers.py": "f431a42c47785cb7fde44cef8a9e6a182522fa5ff119cd79728e295038f34b37",
+    "src/hrm_querysat/layers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/layers/normalization.py": "1ffa8a4d51dd69ef7d7de0de19e378e852915d4782259ca791e95f8866ff8c22",
+    "src/hrm_querysat/loss/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/loss/sat.py": "f73b9cbbdf9933e67ce016d54e642ce8c3c39bcfa1282ca38871544ce81972ed",
+    "src/hrm_querysat/main.py": "802f2d007a58d26eb60c9f43c5602aca383b0c2bac1f78c6e6ddf142790eb949",
+    "src/hrm_querysat/metrics/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/metrics/base.py": "2a77afbba6473ff295b42e7420223047472e1cd03b03f0b6d23683b4b3cf372e",
+    "src/hrm_querysat/metrics/sat_metrics.py": "3cf74c21bb4713090c5da84c832e08a847c38f9ca9798baf7df6638e3a183306",
+    "src/hrm_querysat/model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/model/mlp.py": "62e18d72c4e90110f37a0ccb1f6730989fa1f55db70e81b6e7a88941eb285123",
+    "src/hrm_querysat/model/neurocore.py": "1e341f4f4b87957f721b85d9d013501667e0889fae9a0d0e55ddd39900a04128",
+    "src/hrm_querysat/model/neurocore_query.py": "9546fe0bdee04a96ee3bca692f937686cd2ede86729738dba03b32a163e750f5",
+    "src/hrm_querysat/model/querysat.py": "141bf8914a32472a87988159b5aa74e6df1ab74c65662c4112344a643faa7462",
+    "src/hrm_querysat/observed_model.py": "8ecaf13c56d5a86eb2015b11758367d7689a889ac1854e11ec3ad4f11d489f45",
+    "src/hrm_querysat/optimization/AdaBelief.py": "98ebc29f08b1d763099ab2fad930d1df58442cd0c419ee3f1773ccde16b34387",
+    "src/hrm_querysat/optimization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/registry/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/registry/registry.py": "49462dd6597350b9d5a37e406b6aea94b84ccc4f4acc14687bcbc36262a3a8a3",
+    "src/hrm_querysat/run_config.py": "70cb5cf2eecd9dbcd1493f9e6e321d7bd283cda60360854e6574c1eb72c51740",
+    "src/hrm_querysat/trajectory_model.py": "52f62e26b0e0af73f1d83bd40f27b3905b6b158c2c137ce785ad6f30139944af",
+    "src/hrm_querysat/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_querysat/utils/create_test_folders.py": "cc2214506edafcd724309181972a5d36406afcb825a104ef0486c58df7ce884b",
+    "src/hrm_querysat/utils/iterable.py": "41042f35cb4c08a0ddf793c3704f89511850856ca2403a282296135a3fc65928",
+    "src/hrm_querysat/utils/measure.py": "d47adb5852f1afd934ea7e59fc58bea9d1a43c82da5e7f7888abadc70c325a2e",
+    "src/hrm_querysat/utils/parameters_log.py": "67957e27d0dafdd4891fc9e7cdd91ff677e298b894f3444db934f4b001d91d6e",
+    "src/hrm_querysat/utils/sat.py": "e1993d409c96d73d98e3d4a536b9cea0a3bcf0a4470ade8b43692223b253b28e",
+    "src/hrm_querysat/utils/visualization.py": "22f46c305eadf1fdfe172b2f3b8393311caa666aa0d9ddef304408cda3bee204",
+    "tests/test_installation.py": "9ae5f6061024a69fca0f8e2facf1e9b26eda46dfdb01f67436aa4a5af2ea3d3e",
+    "tests/test_run_config.py": "f45e500fc4578b2a6e80858ac7cc7886551e38b3e69b9bddf71de11c79d52186"
+  },
+  "current_files_note": "SHA-256 of the current supplied files, excluding this manifest. The files/source_files fields retain historical source identities."
+}

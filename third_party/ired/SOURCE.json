@@ -1,0 +1,116 @@
+{
+  "repository": "https://github.com/yilundu/ired_code_release.git",
+  "base_commit": "3d74b85fab7fcf5e28aaf15e9ed3bf51c1a1d545",
+  "distribution": "vendored adapted snapshot",
+  "notice": "The commit identifies the source checkout, not a claim that its working tree was clean. Numerical source bodies are preserved; imports are namespaced. File hashes identify this supplied snapshot. The files mapping describes the initial vendored snapshot; subsequent input adaptations are listed in release_adaptations.",
+  "files": {
+    "LICENSE": "02cf6ed7df17f94fafa61e67a089ee51faac006db35ffa173c70e6763c253cf6",
+    "README.md": "5b0c2d9fe157963c4bd5942166154f1300bfe465034de310bdf39d4ea6fe543f",
+    "pyproject.toml": "0ab9d86a9d6c6d82dba7054e69a5835d3ac2db29fa505a25634eec818b60cfa1",
+    "src/hrm_ired/dataset.py": "0e30777c002a354d05a3957819af53bfb8b5208fbcf86f9380fc058112548bab",
+    "src/hrm_ired/diffusion_lib/denoising_diffusion_pytorch_1d.py": "fbec13092db9b00117890e5bd2628d35c6e5ff59bf6dd5eb80877524d505cc8d",
+    "src/hrm_ired/diffusion_lib/nlm.py": "0d18d7b27b4ef04947822143e18d1a61540a7c53c26ac972c1bed187a82a8a28",
+    "src/hrm_ired/diffusion_lib/nlm_utils.py": "1b18c16c8998741bd596f1cdacb2a546c2b7f5210ba0c0a940039854cc6e5675",
+    "src/hrm_ired/diffusion_lib/transformer.py": "5420f7c6f585c1518eb64b0d45c2cd421bb6ab1126bb74138a5a0b86d7ad575c",
+    "src/hrm_ired/gen_planning_dataset.py": "18c90a07baa3c248cf7cb191f5205fa700c47b2bac7da9f013e9a232dbce8637",
+    "src/hrm_ired/irem_baseline.py": "403dfe2b607948f4a5e53a0d318ed5a0594c4a34d4197528e41b9af95b40370e",
+    "src/hrm_ired/irem_lib/irem.py": "05594c9753967b8c0ef778af1c72d9b98c7e944cdedd6e349e5d88b5d37e2aa4",
+    "src/hrm_ired/models.py": "7c63866543f4b01be1e668d28c15670eed55d1dceb42e525f4cd99ca512a84cd",
+    "src/hrm_ired/planning_dataset.py": "d86369ca59a06cc6f201b2095e1afaac74db141ac4ffd55bdf37d673187fe146",
+    "src/hrm_ired/reasoning_dataset.py": "8c65fe1db20695d879bca8765da48d903456fe8ed842deee68a84145d1412f0c",
+    "src/hrm_ired/sat_dataset.py": "512d292f41d737a8e428e816ae1aa5de45f8995251cd2964a70f2f7c2b400e96",
+    "src/hrm_ired/train.py": "97b97d93980c3e41225d7ac8d24471bf97e63f2d98d2fdbd1ac7892c4d16a1ad"
+  },
+  "source_files": [
+    {
+      "source": "baselines/ired/upstream/models.py",
+      "module": "hrm_ired.models",
+      "source_sha256": "89c750b31adebf9563b47940b658c799d49bd25546270460ee7ec472e5f4dc2b"
+    },
+    {
+      "source": "baselines/ired/upstream/reasoning_dataset.py",
+      "module": "hrm_ired.reasoning_dataset",
+      "source_sha256": "8c65fe1db20695d879bca8765da48d903456fe8ed842deee68a84145d1412f0c"
+    },
+    {
+      "source": "baselines/ired/upstream/irem_baseline.py",
+      "module": "hrm_ired.irem_baseline",
+      "source_sha256": "858c697e9b24f7a643aa386a9fcca7bac6bf4dd9b7cf81f03fbf38cec468a660"
+    },
+    {
+      "source": "baselines/ired/upstream/gen_planning_dataset.py",
+      "module": "hrm_ired.gen_planning_dataset",
+      "source_sha256": "8009efe7d977360eb4a078d12b444d4fe3e5ba0171355b995063c7e4648c1594"
+    },
+    {
+      "source": "baselines/ired/upstream/planning_dataset.py",
+      "module": "hrm_ired.planning_dataset",
+      "source_sha256": "1334873f6667f299492d45b70e4c7d2a2d3e5a4a31bc3fb61990db8491d69f95"
+    },
+    {
+      "source": "baselines/ired/upstream/train.py",
+      "module": "hrm_ired.train",
+      "source_sha256": "375f8f0658cbdc8ed3c54b3253f0a07a6d7df4aadfc0d9ee9de8fb8414137206"
+    },
+    {
+      "source": "baselines/ired/upstream/sat_dataset.py",
+      "module": "hrm_ired.sat_dataset",
+      "source_sha256": "512d292f41d737a8e428e816ae1aa5de45f8995251cd2964a70f2f7c2b400e96"
+    },
+    {
+      "source": "baselines/ired/upstream/diffusion_lib/denoising_diffusion_pytorch_1d.py",
+      "module": "hrm_ired.diffusion_lib.denoising_diffusion_pytorch_1d",
+      "source_sha256": "fbec13092db9b00117890e5bd2628d35c6e5ff59bf6dd5eb80877524d505cc8d"
+    },
+    {
+      "source": "baselines/ired/upstream/diffusion_lib/transformer.py",
+      "module": "hrm_ired.diffusion_lib.transformer",
+      "source_sha256": "5420f7c6f585c1518eb64b0d45c2cd421bb6ab1126bb74138a5a0b86d7ad575c"
+    },
+    {
+      "source": "baselines/ired/upstream/diffusion_lib/nlm.py",
+      "module": "hrm_ired.diffusion_lib.nlm",
+      "source_sha256": "a588d2e77bddfb3ef9eced603b98f60a4f820322ccc98b8c83c4b6ba5ad09a0f"
+    },
+    {
+      "source": "baselines/ired/upstream/diffusion_lib/nlm_utils.py",
+      "module": "hrm_ired.diffusion_lib.nlm_utils",
+      "source_sha256": "1b18c16c8998741bd596f1cdacb2a546c2b7f5210ba0c0a940039854cc6e5675"
+    },
+    {
+      "source": "baselines/ired/upstream/irem_lib/irem.py",
+      "module": "hrm_ired.irem_lib.irem",
+      "source_sha256": "05594c9753967b8c0ef778af1c72d9b98c7e944cdedd6e349e5d88b5d37e2aa4"
+    }
+  ],
+  "release_adaptations": {
+    "src/hrm_ired/sat_dataset.py": {
+      "sha256": "a3719429c228ccef7bd952736e2aee750a51181ed4086e985e94c96ae0b10752",
+      "purpose": "Verified public SAT-Net/RRN input cache, explicit directory overrides and string-preserving CSV loading; original split and encoding retained"
+    },
+    "src/hrm_ired/public_data.py": {
+      "sha256": "6cbed0795cc83b306f42893f71f6c67414c6ff595c4ac2571a8073a870eb91d8",
+      "purpose": "Verified public SAT-Net/RRN input cache, explicit directory overrides and string-preserving CSV loading; original split and encoding retained"
+    }
+  },
+  "current_files": {
+    "LICENSE": "02cf6ed7df17f94fafa61e67a089ee51faac006db35ffa173c70e6763c253cf6",
+    "README.md": "9962bc7ad637b9c2d2caebfcb28fe31530e29326258e8b0d2617806e6cf51891",
+    "pyproject.toml": "f99ac679edfc3fdc49eb22236f9db6b7b1320c741b50680442076c135b6dfe63",
+    "src/hrm_ired/dataset.py": "0e30777c002a354d05a3957819af53bfb8b5208fbcf86f9380fc058112548bab",
+    "src/hrm_ired/diffusion_lib/denoising_diffusion_pytorch_1d.py": "fbec13092db9b00117890e5bd2628d35c6e5ff59bf6dd5eb80877524d505cc8d",
+    "src/hrm_ired/diffusion_lib/nlm.py": "0d18d7b27b4ef04947822143e18d1a61540a7c53c26ac972c1bed187a82a8a28",
+    "src/hrm_ired/diffusion_lib/nlm_utils.py": "1b18c16c8998741bd596f1cdacb2a546c2b7f5210ba0c0a940039854cc6e5675",
+    "src/hrm_ired/diffusion_lib/transformer.py": "5420f7c6f585c1518eb64b0d45c2cd421bb6ab1126bb74138a5a0b86d7ad575c",
+    "src/hrm_ired/gen_planning_dataset.py": "18c90a07baa3c248cf7cb191f5205fa700c47b2bac7da9f013e9a232dbce8637",
+    "src/hrm_ired/irem_baseline.py": "403dfe2b607948f4a5e53a0d318ed5a0594c4a34d4197528e41b9af95b40370e",
+    "src/hrm_ired/irem_lib/irem.py": "05594c9753967b8c0ef778af1c72d9b98c7e944cdedd6e349e5d88b5d37e2aa4",
+    "src/hrm_ired/models.py": "7c63866543f4b01be1e668d28c15670eed55d1dceb42e525f4cd99ca512a84cd",
+    "src/hrm_ired/planning_dataset.py": "d86369ca59a06cc6f201b2095e1afaac74db141ac4ffd55bdf37d673187fe146",
+    "src/hrm_ired/public_data.py": "6cbed0795cc83b306f42893f71f6c67414c6ff595c4ac2571a8073a870eb91d8",
+    "src/hrm_ired/reasoning_dataset.py": "8c65fe1db20695d879bca8765da48d903456fe8ed842deee68a84145d1412f0c",
+    "src/hrm_ired/sat_dataset.py": "a3719429c228ccef7bd952736e2aee750a51181ed4086e985e94c96ae0b10752",
+    "src/hrm_ired/train.py": "97b97d93980c3e41225d7ac8d24471bf97e63f2d98d2fdbd1ac7892c4d16a1ad"
+  },
+  "current_files_note": "SHA-256 of the current supplied files, excluding this manifest. The files/source_files fields retain historical source identities."
+}

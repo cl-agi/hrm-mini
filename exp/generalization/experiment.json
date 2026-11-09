@@ -1,0 +1,38 @@
+{
+  "id": "generalization",
+  "name": "Generalization",
+  "records_root": "exp/generalization/records",
+  "modules": [
+    "hrm.analyse.sudoku.difficulty.prepare",
+    "hrm.analyse.sudoku.difficulty.run_experiment",
+    "hrm.analyse.sudoku.difficulty.sudoku_blank",
+    "hrm.analyse.sudoku.difficulty_1k.prepare",
+    "hrm.analyse.sudoku.difficulty_1k.run_experiment",
+    "hrm.analyse.sudoku.single_clue.evaluate",
+    "hrm.analyse.sudoku.single_clue.prepare_statistics",
+    "hrm.analyse.sudoku.single_clue_controls.prepare_statistics",
+    "hrm.analyse.sudoku.single_clue_controls.verify_pair_metrics",
+    "hrm.analyse.training_summary",
+    "hrm.models.ablations",
+    "hrm.models.autoregressive",
+    "hrm.models.cycle_feedforward",
+    "hrm.models.deep_supervision",
+    "hrm.models.feedforward",
+    "hrm.models.hrm",
+    "hrm.models.layers",
+    "hrm.models.rt",
+    "hrm.models.shared_deep_supervision",
+    "hrm.tasks.build_sudoku_subsets_architectures",
+    "hrm.tasks.build_sudoku_tiny_subsets_architectures",
+    "hrm.tasks.maze",
+    "hrm.tasks.sudoku_architectures",
+    "hrm.tasks.sudoku_blank_difficulty_1k",
+    "hrm.training.optimizer",
+    "hrm.training.trainer"
+  ],
+  "recipes": [
+    "sudoku-hrm",
+    "sudoku-hrm-easy-layers2-variant-01",
+    "sudoku-rt-easy-layers4-recurrent7-variant-01"
+  ]
+}

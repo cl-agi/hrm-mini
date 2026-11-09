@@ -1,0 +1,13 @@
+{
+  "training_source": "Sudoku data-scaling campaign fixed-update trainer",
+  "training_source_sha256": "15b6acfc9ae62158ba0603087901652d357d51f30e644f550e240e6751b3f9c7",
+  "protocol": {
+    "total_steps": 83200,
+    "eval_interval": 4160,
+    "global_batch_size": 768,
+    "selection": "Highest fixed16 test exact match; latest optimizer-step tie",
+    "training_draw": "First 1000 of upstream train shuffled with seed42, shared across all training seeds",
+    "test_draw": "First 20000 of upstream test shuffled with seed42, shared across all runs"
+  },
+  "integration": "Original train_single_seed control flow retained; imports use shared package, output location configurable, optional compilation, scalar log added, existing runs rejected."
+}

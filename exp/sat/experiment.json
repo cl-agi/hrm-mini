@@ -1,0 +1,25 @@
+{
+  "id": "sat",
+  "name": "SAT and graph coloring",
+  "records_root": "exp/sat/records",
+  "modules": [
+    "hrm.analyse.sat.evaluate",
+    "hrm.analyse.sat.graph_coloring.evaluate_neurosat",
+    "hrm.analyse.sat.graph_coloring.evaluate_querysat",
+    "hrm.analyse.sat.graph_coloring.neurosat",
+    "hrm.analyse.sat.graph_coloring.querysat",
+    "hrm.analyse.sat.graph_coloring.recurrent",
+    "hrm.analyse.sat.graph_coloring.run_from_config",
+    "hrm.analyse.sat.graph_coloring.verify_inventory",
+    "hrm.analyse.sat.hrm.common",
+    "hrm.analyse.sat.rt.common",
+    "hrm.analyse.sat.rt.encoding",
+    "hrm.analyse.training_summary",
+    "hrm.models.hrm",
+    "hrm.models.layers",
+    "hrm.tasks.sat_flow",
+    "hrm.training.optimizer",
+    "hrm.training.sat"
+  ],
+  "recipes": []
+}

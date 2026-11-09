@@ -1,0 +1,12 @@
+{
+  "h_l_joint_transition_jacobian": {
+    "original_sha256": "da10d3c42c8074465d837838606b09b02b271a40e3fd35749b2307853a8ecc62",
+    "origin": "original experiment/08_h_drive_modulation",
+    "adaptation": "Preserved numerical kernels; replaced legacy campaign CLI with public-input record generation."
+  },
+  "h_l_natural_taylor_prediction": {
+    "original_sha256": "df8a7fb4cddec35fa28ee321cf27594f4dc90992ec99828422110de7d3a7fde4",
+    "origin": "original experiment/08_h_drive_modulation",
+    "adaptation": "Preserved numerical kernels; replaced legacy campaign CLI with public-input record generation."
+  }
+}

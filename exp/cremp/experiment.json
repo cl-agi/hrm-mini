@@ -1,0 +1,29 @@
+{
+  "id": "cremp",
+  "name": "Molecular conformations (CREMP)",
+  "records_root": "exp/cremp/records",
+  "modules": [
+    "hrm.analyse.cremp.classical.checks",
+    "hrm.analyse.cremp.classical.evaluate_ring",
+    "hrm.analyse.cremp.classical.evaluate_ring_run_v1_snapshot",
+    "hrm.analyse.cremp.classical.export_conditions",
+    "hrm.analyse.cremp.classical.freeze_report",
+    "hrm.analyse.cremp.classical.freeze_report_v0_strict_snapshot",
+    "hrm.analyse.cremp.classical.generate_templates",
+    "hrm.analyse.cremp.classical.template_core",
+    "hrm.analyse.cremp.evaluation.audit_outer_matrix",
+    "hrm.analyse.cremp.evaluation.audit_replications",
+    "hrm.analyse.cremp.evaluation.bootstrap",
+    "hrm.analyse.cremp.evaluation.eval_channel_losses",
+    "hrm.analyse.cremp.evaluation.eval_prefix",
+    "hrm.analyse.cremp.evaluation.generate_angles",
+    "hrm.analyse.cremp.evaluation.generate_outer",
+    "hrm.analyse.cremp.evaluation.gpu_smoke_outer",
+    "hrm.analyse.cremp.evaluation.outer_model",
+    "hrm.analyse.cremp.evaluation.project_angles",
+    "hrm.analyse.cremp.evaluation.status_outer_matrix",
+    "hrm.analyse.cremp.evaluation.train_angles",
+    "hrm.analyse.cremp.evaluation.train_outer"
+  ],
+  "recipes": []
+}

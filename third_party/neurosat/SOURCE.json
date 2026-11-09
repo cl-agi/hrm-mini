@@ -1,0 +1,67 @@
+{
+  "snapshot": "provenance/source-4d6c0befa73b52cf/code",
+  "adaptations": "Internal imports namespaced; numerical definitions unchanged",
+  "source_files": {
+    "ln_lstm_cell.py": {
+      "source": "provenance/source-47ee64c405d53e96/ln_lstm_cell.py",
+      "source_sha256": "dd7baab6ea3ccf0819f5c4fd0841fa604ecd9be7b99c86fac2cc9f1a29f478f9",
+      "vendored_sha256": "dd7baab6ea3ccf0819f5c4fd0841fa604ecd9be7b99c86fac2cc9f1a29f478f9"
+    },
+    "gnn.py": {
+      "source": "provenance/source-086ec8d3d20da7ee/gnn.py",
+      "source_sha256": "167c14d8bdd73a59e438df93654318767dd379a297bd74fa08a1dfb3de1f4462",
+      "vendored_sha256": "4e43785765d9abf49d982bc1979e7cc248e81b04264d3e94b5a4cebfbbf880a0"
+    },
+    "scatter.py": {
+      "source": "provenance/source-4d64054cd1f2cfc8/scatter.py",
+      "source_sha256": "8e75ace67922de49dbc59ce866fd3b8ac1366202405ba2d495f9716d3faac29f",
+      "vendored_sha256": "8e75ace67922de49dbc59ce866fd3b8ac1366202405ba2d495f9716d3faac29f"
+    },
+    "mlp.py": {
+      "source": "provenance/source-7c5bacf781569420/mlp.py",
+      "source_sha256": "ccdae323e13a255390d6da973e667c9eb98d10a1b014a22f325e4702ff3613d0",
+      "vendored_sha256": "ccdae323e13a255390d6da973e667c9eb98d10a1b014a22f325e4702ff3613d0"
+    },
+    "options.py": {
+      "source": "provenance/source-0a853db6ac54d722/options.py",
+      "source_sha256": "d9803950c66e583956e7bab876d5174dd52573d4da720b49b14dc9529822d04c",
+      "vendored_sha256": "d9803950c66e583956e7bab876d5174dd52573d4da720b49b14dc9529822d04c"
+    }
+  },
+  "files": {
+    "LICENSE": "02599cc432462055cd75a157351bcb2c5204932a8dae92a659df6becd4073a50",
+    "pyproject.toml": "90f8af8983ee7bfe634443bba3c2960ae98e8695d9143b58042b9758c4288c6b",
+    "readme.md": "d2e04318537790af2d5dccebb277f86aa369034221a72a3ae1302a3798b6cf1e",
+    "src/hrm_neurosat/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_neurosat/gnn.py": "4e43785765d9abf49d982bc1979e7cc248e81b04264d3e94b5a4cebfbbf880a0",
+    "src/hrm_neurosat/ln_lstm_cell.py": "dd7baab6ea3ccf0819f5c4fd0841fa604ecd9be7b99c86fac2cc9f1a29f478f9",
+    "src/hrm_neurosat/mlp.py": "ccdae323e13a255390d6da973e667c9eb98d10a1b014a22f325e4702ff3613d0",
+    "src/hrm_neurosat/options.py": "d9803950c66e583956e7bab876d5174dd52573d4da720b49b14dc9529822d04c",
+    "src/hrm_neurosat/scatter.py": "8e75ace67922de49dbc59ce866fd3b8ac1366202405ba2d495f9716d3faac29f"
+  },
+  "pretrained_source": {
+    "repository": "https://github.com/ArtLabBocconi/RandCSPBench",
+    "documentation_commit": "20702c0be4ebbd0f039be67aaa899086e4d6a678",
+    "drive_file_id": "1qnq0-vNoAbJpiAw6wgxcdllLabUMaNub",
+    "sha256": "6d90914da4d44c64c790afd3bfac7a19c6b1d9fd3e6860b334150714f656af99"
+  },
+  "release_adaptations": {
+    "src/hrm_neurosat/pretrained.py": {
+      "sha256": "94497566d9118509620764db8de80a396387b4a3fe71346541bec6d753aff530",
+      "purpose": "Verified public checkpoint download and strict model loading; numerical implementation unchanged"
+    }
+  },
+  "current_files": {
+    "LICENSE": "02599cc432462055cd75a157351bcb2c5204932a8dae92a659df6becd4073a50",
+    "pyproject.toml": "bc45e2744e4db32fbbcea85dbbc8e2b0705e7c4ca1e1a0e39727bba8db31a531",
+    "readme.md": "fe6d5114bf7559edd12773c8eb4053f171231876c77a38a6ed8d027df64c3151",
+    "src/hrm_neurosat/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/hrm_neurosat/gnn.py": "4e43785765d9abf49d982bc1979e7cc248e81b04264d3e94b5a4cebfbbf880a0",
+    "src/hrm_neurosat/ln_lstm_cell.py": "dd7baab6ea3ccf0819f5c4fd0841fa604ecd9be7b99c86fac2cc9f1a29f478f9",
+    "src/hrm_neurosat/mlp.py": "ccdae323e13a255390d6da973e667c9eb98d10a1b014a22f325e4702ff3613d0",
+    "src/hrm_neurosat/options.py": "d9803950c66e583956e7bab876d5174dd52573d4da720b49b14dc9529822d04c",
+    "src/hrm_neurosat/pretrained.py": "94497566d9118509620764db8de80a396387b4a3fe71346541bec6d753aff530",
+    "src/hrm_neurosat/scatter.py": "8e75ace67922de49dbc59ce866fd3b8ac1366202405ba2d495f9716d3faac29f"
+  },
+  "current_files_note": "SHA-256 of the current supplied files, excluding this manifest. The files/source_files fields retain historical source identities."
+}

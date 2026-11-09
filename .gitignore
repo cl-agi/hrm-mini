@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Large datasets and checkpoints are managed separately from source code.
+/checkpoint/
+/data/
+
+# Experiment records and runtime outputs are local assets.
+/exp/*/records/
+/exp/*/outputs/
+
+# Local environments, build products and credentials.
+.venv/
+venv/
+build/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+wandb/

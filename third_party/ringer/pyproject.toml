@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hrm-ringer-snapshot"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["pytorch-lightning", "ray", "typer", "tqdm", "torch", "numpy", "pandas", "scipy", "transformers==4.49.0", "rdkit"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.setuptools.package-data]
+ringer = ["utils/data/*.csv"]

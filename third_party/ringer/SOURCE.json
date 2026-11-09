@@ -1,0 +1,219 @@
+{
+  "repository": null,
+  "base_commit": null,
+  "distribution": "vendored adapted snapshot",
+  "notice": "No historical upstream commit is asserted. The files mapping identifies the initial supplied snapshot; subsequent adaptations may differ from those hashes.",
+  "files": {
+    "LICENSE": "a0987cf5b7a7f0af053e3fc8c0f9748d24198c6e8a3335b2a679d167cb2dcc78",
+    "README.md": "63f08a471ed55a756e09fcbb90c472e0ed64334eb115072557bbf55d7cb76826",
+    "pyproject.toml": "92b8589bf0f08ba26c4fec5d994c0b0e597d549dddf93cbbe1a62930b2fb4426",
+    "src/ringer/__init__.py": "2f4de206c060925f1e975dc338e3b0c38e3006f5d73965053c7eb9bc5a58af81",
+    "src/ringer/compute_metrics.py": "32a6419580c645ec2d3a789629e0f795330b9b450df2fe7e0d3a8a8c5ca20fa0",
+    "src/ringer/data/__init__.py": "2594d6339b1fc2b0f3fed8997ee5e166a21c498ecde535b6e49b4684624ec58e",
+    "src/ringer/data/macrocycle.py": "7592be3bc6fbcaa6d8387894e8af1a22329e5be2efd06b4c5c796486884817b8",
+    "src/ringer/data/noised.py": "1847fd949ea2c82f2454050b18ab5c80d4ac5696667fe2f8529c48a3ed07ba64",
+    "src/ringer/eval.py": "2fb538b994619c5384bc9712c10e0dc1ca78982f7790bc6104006bd1bd6a1ff9",
+    "src/ringer/models/__init__.py": "f1228e5e68fce8015998cf6e08d90db386dce1a6b7b06636b47180a279a64935",
+    "src/ringer/models/bert_for_diffusion.py": "211215a0e1f7d8032ff6e1bfd387f78eaff04232bb6ce69478293e9eec73b2dc",
+    "src/ringer/models/components/attention.py": "2045220e3605b6be30f27be808a37c99b0127b758311447b98e39a6076bacc87",
+    "src/ringer/models/components/embeddings.py": "4d1c8fba3f3121e679800f78829184fe94093b4ddb64f6861e62ef92b95fea54",
+    "src/ringer/models/components/output.py": "24aebd230e66330a80c01339d72d1d4f97179527f0b842d8fbeef170d2ece688",
+    "src/ringer/reconstruct.py": "4bf194e46bf2b87a75839878512f27bdb84c69e150c8dd2e43a0dbec9e060a91",
+    "src/ringer/sidechain_reconstruction/__init__.py": "5d17ae0a980289be29ad2dceb06c169bc0c53bad5c0e4db546f9fc3e892ad62d",
+    "src/ringer/sidechain_reconstruction/reconstruction.py": "fc61e81c87437f303d1e2e0048b41bdc7a6c2a0528fc613e698a8fe8f08c8a8d",
+    "src/ringer/sidechain_reconstruction/transforms.py": "c6452ee961c62afaf81b1503695c556e85334bfff4e243713b4952c8282a2d06",
+    "src/ringer/train.py": "18401b4fa49133b1233fcef65ef95462d618e1e035487eb43832bfde3a3c6ebe",
+    "src/ringer/utils/chem.py": "fc484362dceae9df6c2696b19ac01df8eedaaade024285b36c487d9fd85dbddf",
+    "src/ringer/utils/data/amino_acids.csv": "cdfdb1869fe5392fba2de3eead407229b8fefab124807f86626c9747291c68a6",
+    "src/ringer/utils/data_loading.py": "1d4cf41e3964c90af32d359b8ae0608a3e20b05402419883e4924374646f8c21",
+    "src/ringer/utils/evaluation.py": "ff5d6fdb878bedb778f5998c9cdaacca7632914c27444e30dd7da8d834f89e6b",
+    "src/ringer/utils/featurization.py": "69a7271c11f27c5e577047c99d8dd4d3234618a19a16b7e0ab7dc8d1ee1b25d8",
+    "src/ringer/utils/internal_coords.py": "f4dbad2a09fd018f0e4aa5e15a4650247f692af82cdd752554aa5de2a756aae8",
+    "src/ringer/utils/losses.py": "1c45f5cb8f4b4a16c5799dda5208b7d56e845b8e4ff8a31c05c6c56e02803c6c",
+    "src/ringer/utils/peptides.py": "9c41d80324e27c83e98e6f5ef65ab0153952a57b521d6977caf903b340ce0702",
+    "src/ringer/utils/reconstruction.py": "53c40adfb8ebf48c4a2b8fff18e31d1ef1002a35c1d264b359abd3e60995fdc1",
+    "src/ringer/utils/sampling.py": "8c5ab7e17315552e38a871007d28e975505bd1b7307d6f865be040ebbf2e8e44",
+    "src/ringer/utils/utils.py": "3944ed5dcccc2f1e90caa0a8019b9be520e812a5bf5dc43c566beab877b44883",
+    "src/ringer/utils/variance_schedules.py": "f179157b45f3128d8176a2cca1fe6017c8b6c6dff7df7f09807d67408c3ebe31"
+  },
+  "source_files": [
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/compute_metrics.py",
+      "module": "ringer.compute_metrics",
+      "source_sha256": "32a6419580c645ec2d3a789629e0f795330b9b450df2fe7e0d3a8a8c5ca20fa0"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/__init__.py",
+      "module": "ringer",
+      "source_sha256": "2f4de206c060925f1e975dc338e3b0c38e3006f5d73965053c7eb9bc5a58af81"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/train.py",
+      "module": "ringer.train",
+      "source_sha256": "8bd512eee9598211b744b1a4a325c6cdc2f6c03995f0ef4c72d5652db897a509"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/reconstruct.py",
+      "module": "ringer.reconstruct",
+      "source_sha256": "4bf194e46bf2b87a75839878512f27bdb84c69e150c8dd2e43a0dbec9e060a91"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/eval.py",
+      "module": "ringer.eval",
+      "source_sha256": "9f90c6f3b0c6e40c237882b736483aecb68a71afba6c771ee47e96c92364ccf6"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/reconstruction.py",
+      "module": "ringer.utils.reconstruction",
+      "source_sha256": "53c40adfb8ebf48c4a2b8fff18e31d1ef1002a35c1d264b359abd3e60995fdc1"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/data_loading.py",
+      "module": "ringer.utils.data_loading",
+      "source_sha256": "9c941c617bcd331acdafe331a6213cfa783b40e1b8c4c91e83fd4851b9f44110"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/evaluation.py",
+      "module": "ringer.utils.evaluation",
+      "source_sha256": "ff5d6fdb878bedb778f5998c9cdaacca7632914c27444e30dd7da8d834f89e6b"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/internal_coords.py",
+      "module": "ringer.utils.internal_coords",
+      "source_sha256": "f4dbad2a09fd018f0e4aa5e15a4650247f692af82cdd752554aa5de2a756aae8"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/__init__.py",
+      "module": "ringer.utils",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/chem.py",
+      "module": "ringer.utils.chem",
+      "source_sha256": "fc484362dceae9df6c2696b19ac01df8eedaaade024285b36c487d9fd85dbddf"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/utils.py",
+      "module": "ringer.utils.utils",
+      "source_sha256": "3944ed5dcccc2f1e90caa0a8019b9be520e812a5bf5dc43c566beab877b44883"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/sampling.py",
+      "module": "ringer.utils.sampling",
+      "source_sha256": "8c5ab7e17315552e38a871007d28e975505bd1b7307d6f865be040ebbf2e8e44"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/variance_schedules.py",
+      "module": "ringer.utils.variance_schedules",
+      "source_sha256": "f179157b45f3128d8176a2cca1fe6017c8b6c6dff7df7f09807d67408c3ebe31"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/losses.py",
+      "module": "ringer.utils.losses",
+      "source_sha256": "1c45f5cb8f4b4a16c5799dda5208b7d56e845b8e4ff8a31c05c6c56e02803c6c"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/peptides.py",
+      "module": "ringer.utils.peptides",
+      "source_sha256": "9c41d80324e27c83e98e6f5ef65ab0153952a57b521d6977caf903b340ce0702"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/utils/featurization.py",
+      "module": "ringer.utils.featurization",
+      "source_sha256": "69a7271c11f27c5e577047c99d8dd4d3234618a19a16b7e0ab7dc8d1ee1b25d8"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/models/__init__.py",
+      "module": "ringer.models",
+      "source_sha256": "f1228e5e68fce8015998cf6e08d90db386dce1a6b7b06636b47180a279a64935"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/models/bert_for_diffusion.py",
+      "module": "ringer.models.bert_for_diffusion",
+      "source_sha256": "211215a0e1f7d8032ff6e1bfd387f78eaff04232bb6ce69478293e9eec73b2dc"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/sidechain_reconstruction/transforms.py",
+      "module": "ringer.sidechain_reconstruction.transforms",
+      "source_sha256": "c6452ee961c62afaf81b1503695c556e85334bfff4e243713b4952c8282a2d06"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/sidechain_reconstruction/reconstruction.py",
+      "module": "ringer.sidechain_reconstruction.reconstruction",
+      "source_sha256": "fc61e81c87437f303d1e2e0048b41bdc7a6c2a0528fc613e698a8fe8f08c8a8d"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/sidechain_reconstruction/__init__.py",
+      "module": "ringer.sidechain_reconstruction",
+      "source_sha256": "5d17ae0a980289be29ad2dceb06c169bc0c53bad5c0e4db546f9fc3e892ad62d"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/data/__init__.py",
+      "module": "ringer.data",
+      "source_sha256": "2594d6339b1fc2b0f3fed8997ee5e166a21c498ecde535b6e49b4684624ec58e"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/data/noised.py",
+      "module": "ringer.data.noised",
+      "source_sha256": "1847fd949ea2c82f2454050b18ab5c80d4ac5696667fe2f8529c48a3ed07ba64"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/data/macrocycle.py",
+      "module": "ringer.data.macrocycle",
+      "source_sha256": "7592be3bc6fbcaa6d8387894e8af1a22329e5be2efd06b4c5c796486884817b8"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/models/components/attention.py",
+      "module": "ringer.models.components.attention",
+      "source_sha256": "2045220e3605b6be30f27be808a37c99b0127b758311447b98e39a6076bacc87"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/models/components/__init__.py",
+      "module": "ringer.models.components",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/models/components/embeddings.py",
+      "module": "ringer.models.components.embeddings",
+      "source_sha256": "4d1c8fba3f3121e679800f78829184fe94093b4ddb64f6861e62ef92b95fea54"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/ringer/models/components/output.py",
+      "module": "ringer.models.components.output",
+      "source_sha256": "24aebd230e66330a80c01339d72d1d4f97179527f0b842d8fbeef170d2ece688"
+    }
+  ],
+  "current_files": {
+    "LICENSE": "a0987cf5b7a7f0af053e3fc8c0f9748d24198c6e8a3335b2a679d167cb2dcc78",
+    "README.md": "226282e53995aa05202d1908aee2fd2457a85c3507441e64062e04d59dcb0d35",
+    "pyproject.toml": "92b8589bf0f08ba26c4fec5d994c0b0e597d549dddf93cbbe1a62930b2fb4426",
+    "src/ringer/__init__.py": "2f4de206c060925f1e975dc338e3b0c38e3006f5d73965053c7eb9bc5a58af81",
+    "src/ringer/compute_metrics.py": "32a6419580c645ec2d3a789629e0f795330b9b450df2fe7e0d3a8a8c5ca20fa0",
+    "src/ringer/data/__init__.py": "2594d6339b1fc2b0f3fed8997ee5e166a21c498ecde535b6e49b4684624ec58e",
+    "src/ringer/data/macrocycle.py": "7592be3bc6fbcaa6d8387894e8af1a22329e5be2efd06b4c5c796486884817b8",
+    "src/ringer/data/noised.py": "1847fd949ea2c82f2454050b18ab5c80d4ac5696667fe2f8529c48a3ed07ba64",
+    "src/ringer/models/__init__.py": "f1228e5e68fce8015998cf6e08d90db386dce1a6b7b06636b47180a279a64935",
+    "src/ringer/models/bert_for_diffusion.py": "211215a0e1f7d8032ff6e1bfd387f78eaff04232bb6ce69478293e9eec73b2dc",
+    "src/ringer/models/components/attention.py": "2045220e3605b6be30f27be808a37c99b0127b758311447b98e39a6076bacc87",
+    "src/ringer/models/components/embeddings.py": "4d1c8fba3f3121e679800f78829184fe94093b4ddb64f6861e62ef92b95fea54",
+    "src/ringer/models/components/output.py": "24aebd230e66330a80c01339d72d1d4f97179527f0b842d8fbeef170d2ece688",
+    "src/ringer/reconstruct.py": "4bf194e46bf2b87a75839878512f27bdb84c69e150c8dd2e43a0dbec9e060a91",
+    "src/ringer/sidechain_reconstruction/__init__.py": "5d17ae0a980289be29ad2dceb06c169bc0c53bad5c0e4db546f9fc3e892ad62d",
+    "src/ringer/sidechain_reconstruction/reconstruction.py": "fc61e81c87437f303d1e2e0048b41bdc7a6c2a0528fc613e698a8fe8f08c8a8d",
+    "src/ringer/sidechain_reconstruction/transforms.py": "c6452ee961c62afaf81b1503695c556e85334bfff4e243713b4952c8282a2d06",
+    "src/ringer/train.py": "18401b4fa49133b1233fcef65ef95462d618e1e035487eb43832bfde3a3c6ebe",
+    "src/ringer/utils/chem.py": "fc484362dceae9df6c2696b19ac01df8eedaaade024285b36c487d9fd85dbddf",
+    "src/ringer/utils/data/amino_acids.csv": "cdfdb1869fe5392fba2de3eead407229b8fefab124807f86626c9747291c68a6",
+    "src/ringer/utils/data_loading.py": "1d4cf41e3964c90af32d359b8ae0608a3e20b05402419883e4924374646f8c21",
+    "src/ringer/utils/evaluation.py": "ff5d6fdb878bedb778f5998c9cdaacca7632914c27444e30dd7da8d834f89e6b",
+    "src/ringer/utils/featurization.py": "69a7271c11f27c5e577047c99d8dd4d3234618a19a16b7e0ab7dc8d1ee1b25d8",
+    "src/ringer/utils/internal_coords.py": "f4dbad2a09fd018f0e4aa5e15a4650247f692af82cdd752554aa5de2a756aae8",
+    "src/ringer/utils/losses.py": "1c45f5cb8f4b4a16c5799dda5208b7d56e845b8e4ff8a31c05c6c56e02803c6c",
+    "src/ringer/utils/peptides.py": "9c41d80324e27c83e98e6f5ef65ab0153952a57b521d6977caf903b340ce0702",
+    "src/ringer/utils/reconstruction.py": "53c40adfb8ebf48c4a2b8fff18e31d1ef1002a35c1d264b359abd3e60995fdc1",
+    "src/ringer/utils/sampling.py": "8c5ab7e17315552e38a871007d28e975505bd1b7307d6f865be040ebbf2e8e44",
+    "src/ringer/utils/utils.py": "3944ed5dcccc2f1e90caa0a8019b9be520e812a5bf5dc43c566beab877b44883",
+    "src/ringer/utils/variance_schedules.py": "f179157b45f3128d8176a2cca1fe6017c8b6c6dff7df7f09807d67408c3ebe31"
+  },
+  "current_files_note": "SHA-256 of the current supplied files, excluding this manifest. The files/source_files fields retain historical source identities."
+}

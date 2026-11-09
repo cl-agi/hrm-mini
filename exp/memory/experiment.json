@@ -1,0 +1,29 @@
+{
+  "id": "memory",
+  "name": "Memory and sensitivity",
+  "records_root": "exp/memory/records",
+  "modules": [
+    "hrm.analyse.dynamics.jacobian.cli",
+    "hrm.analyse.dynamics.old_h_recovery.audit",
+    "hrm.analyse.dynamics.old_h_recovery.fit",
+    "hrm.analyse.dynamics.old_h_recovery.run",
+    "hrm.analyse.dynamics.old_h_recovery.summarize",
+    "hrm.analyse.dynamics.output_sensitivity.h_l_joint_transition_jacobian",
+    "hrm.analyse.dynamics.output_sensitivity.h_l_natural_taylor_prediction",
+    "hrm.analyse.dynamics.output_sensitivity.h_l_output_triangle_vjp",
+    "hrm.analyse.dynamics.output_sensitivity.rt_output_triangle_vjp",
+    "hrm.analyse.training_summary"
+  ],
+  "recipes": [
+    "sudoku-hrm",
+    "sudoku-hrm-layers2-variant-03",
+    "sudoku-rt-layers4-recurrent7-variant-01",
+    "sudoku-hrm-no-hh-link-layers2-epochs5-continuation-variant-01",
+    "sudoku-hrm-layers2-epochs5-continuation-variant-01",
+    "sudoku-hrm-no-hh-link-layers2-epochs5-continuation-variant-02",
+    "sudoku-hrm-layers2-epochs5-continuation-variant-02",
+    "sudoku-hrm-no-hh-link-layers2-epochs5-continuation-variant-03",
+    "sudoku-hrm-layers2-epochs5-continuation-variant-03",
+    "sudoku-hrm-no-hh-link-layers2-variant-08"
+  ]
+}

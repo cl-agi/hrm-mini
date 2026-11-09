@@ -1,0 +1,47 @@
+{
+  "training_policy": "data_scaling",
+  "data": {
+    "name": "hrm.tasks.sudoku_stable16",
+    "eval_split": "test",
+    "dataset_name": "sapientinc/sudoku-extreme",
+    "train_size": 1000,
+    "test_size": 20000,
+    "subsample_seed": 42,
+    "augment": true
+  },
+  "arch": {
+    "name": "hrm.models.rt@RecurrentTransformer",
+    "cycles_per_data": 16,
+    "num_layers": 4,
+    "bptt": true,
+    "cycles": 7
+  },
+  "transformer": {
+    "num_layers": 4,
+    "hidden_size": 512,
+    "intermediate_size": 2048,
+    "head_dim": 64,
+    "norm_eps": 1e-06,
+    "rope_theta": 10000.0,
+    "forward_dtype": "bfloat16"
+  },
+  "scaling": {
+    "base_lr": 0.0001,
+    "reference_width": 512,
+    "width_exponent": 1.0
+  },
+  "cycles_per_data": 16,
+  "eval_cycles": 16,
+  "eval_stable_cycles": 16,
+  "total_steps": 83200,
+  "num_evals": 20,
+  "local_batch_size": 96,
+  "lr": 0.0001,
+  "lr_warmup_steps": 2000,
+  "lr_min_ratio": 1.0,
+  "beta1": 0.9,
+  "beta2": 0.95,
+  "weight_decay": 1.0,
+  "ema": 0.999,
+  "log_interval": 5
+}

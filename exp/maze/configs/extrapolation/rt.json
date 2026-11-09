@@ -1,0 +1,79 @@
+{
+  "architecture_name": "RT",
+  "architecture": {
+    "num_layers": 4,
+    "hidden_size": 512,
+    "intermediate_size": 2048,
+    "head_dim": 64,
+    "norm_eps": 1e-06,
+    "rope_theta": 10000.0,
+    "cycles": 7,
+    "bptt": true,
+    "forward_dtype": "bfloat16",
+    "is_mlp_mixer": false,
+    "vocab_size": 6,
+    "seq_len": 901,
+    "is_causal": false,
+    "allowed_sizes": [
+      15,
+      20,
+      25,
+      30,
+      32,
+      35,
+      40,
+      45,
+      50,
+      60,
+      80
+    ],
+    "rope_type": "2d"
+  },
+  "training": {
+    "epochs": 20,
+    "cycles_per_data": 16,
+    "repeat": 25,
+    "world_size": 8,
+    "local_batch_size": 96,
+    "global_batch_size": 768,
+    "unique_examples": 1000,
+    "batches_per_epoch": 32,
+    "total_optimizer_steps": 10240,
+    "lr": 0.0001,
+    "lr_warmup_steps": 2000,
+    "lr_min_ratio": 1.0,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "weight_decay": 0.5,
+    "ema": 0.999,
+    "log_interval": 5
+  },
+  "evaluation": {
+    "inference_cycles": 16,
+    "sizes": [
+      15,
+      20,
+      25,
+      30,
+      32,
+      35,
+      40,
+      45,
+      50,
+      60,
+      80
+    ],
+    "include_control": true,
+    "examples_per_dataset": 1000,
+    "selection": "fixed_final_epoch",
+    "weights": "EMA",
+    "metric": "shortest_path_accuracy"
+  },
+  "runtime": {
+    "compile_dynamic": false,
+    "compile_fullgraph": true,
+    "dynamo_recompile_limit": 64,
+    "dynamo_accumulated_recompile_limit": 256,
+    "num_workers": 1
+  }
+}

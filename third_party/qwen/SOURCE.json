@@ -1,0 +1,132 @@
+{
+  "repository": "https://github.com/ZW471/hrm-mini.git",
+  "base_commit": "1553d84dae8bae452c01b218799f45fafab48d02",
+  "distribution": "vendored adapted snapshot",
+  "notice": "The commit identifies the source checkout, not a claim that its working tree was clean. Numerical source bodies are preserved; imports are namespaced. File hashes identify this supplied snapshot. Omitted Sudoku paths now resolve pinned HF inputs; explicit local paths remain overrides and rows are schema-validated.",
+  "files": {
+    "README.md": "8943abc654f84b08019936693ddffdf5c9ec9b446c6edd8c916f7777d5636d58",
+    "pyproject.toml": "43c36c477dcf4e969cf3778b50abefbc2bb63a3e978b2814837a8303ad9497c1",
+    "src/hrm_qwen/instruct/rollout.py": "4c2c9c12f1db51147d22bb64a24832d18769f59608becb696fc682693d1d17a1",
+    "src/hrm_qwen/instruct/train.py": "31f48cc44dd266e86b761d0cd2fc9c0323d8c5e276b0482694421ed933a07128",
+    "src/hrm_qwen/sft/data.py": "222794e420cd3a98fe1dcb37ced32125f0060ff5bd95afe9efbb330283fde569",
+    "src/hrm_qwen/sft/eval.py": "79ee389188d12bb7f8be3f6028d652e49479254434e4ee9d508ebb4f7845e0d3",
+    "src/hrm_qwen/sft/prompt_eval.py": "853fa25df556b9d61d14484875dc1923392b2f8034542d5810fe0796482c96cd",
+    "src/hrm_qwen/sft/train.py": "1fa7b19f5373a6d6cf85fd7f3c7b87b467fd34899e9928b05269e3a18bca7030",
+    "src/hrm_qwen/cot/train.py": "fd8d4fd358512f0e2fb05f795339f93da60da30ea414974db44e4ecbec5f5fdf",
+    "src/hrm_qwen/cot/prompt.py": "1dfaf6c90a172408bdc666532a79aebce69fa0a712a177662052e44ceb0178a8",
+    "src/hrm_qwen/cot/run_config.py": "180150e60bd0898723099d5b6d8f2ec5b730ac26d0476f5f330e6c657f143e59",
+    "src/hrm_qwen/cot/scoring.py": "a51aaa6d2d37e3483ae1011131df1e4d6a39e8e03596b2f662d32c572de8eec8",
+    "src/hrm_qwen/cot/evaluate.py": "94dee40cb199cc75163fe39e124df6ba69813bb521517febf3f76153766dbb56",
+    "src/hrm_qwen/cot/generate.py": "adc4d168d9792bec9f4bdad62ce6aca3bda1b68a4b5b0dab9db4d9f95aa2f586",
+    "src/hrm_qwen/cot/generation_config.py": "d2c4d31e176af9a56b0e06baee6ebdbcef46f6d7a2642c6ccd50f6983e185114",
+    "src/hrm_qwen/cot/repair.py": "a8d9bffcc803a8473968c99e8ff3141264fd007d961522315d7522a60d6253d7",
+    "src/hrm_qwen/cot/repair_config.py": "e8a54fcb03eddabd425de11632c18edcdf53d0f011f25268adc4917f44fadfee",
+    "src/hrm_qwen/cot/ratings.py": "8b22e12a4678a61b3fdbba54d7ba88b39ed7aad0613f894a9f78768efa20d2e8"
+  },
+  "source_files": [
+    {
+      "source": "baselines/qwen/instruct/__init__.py",
+      "module": "hrm_qwen.instruct",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "baselines/qwen/instruct/rollout.py",
+      "module": "hrm_qwen.instruct.rollout",
+      "source_sha256": "23e7b3eb5d0e820ff25ded49d091f39c562e40e071a049286930490b029c9f86"
+    },
+    {
+      "source": "baselines/qwen/instruct/train.py",
+      "module": "hrm_qwen.instruct.train",
+      "source_sha256": "72378517d6af048d6380dc39e706e6a8aa0e705b188c1860340cc38a2a24076a"
+    },
+    {
+      "source": "baselines/qwen/sft/__init__.py",
+      "module": "hrm_qwen.sft",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "baselines/qwen/sft/train.py",
+      "module": "hrm_qwen.sft.train",
+      "source_sha256": "ccf4803847c65478946990838343381b1897f4cb7f4fada288c78e915aa6dd79"
+    },
+    {
+      "source": "baselines/qwen/sft/prompt_eval.py",
+      "module": "hrm_qwen.sft.prompt_eval",
+      "source_sha256": "231110c4cf1197f21108a9f6f7cc548a40d468cbac3140c5e2c508c83e4f2e75"
+    },
+    {
+      "source": "baselines/qwen/sft/eval.py",
+      "module": "hrm_qwen.sft.eval",
+      "source_sha256": "7fcda0eef0417fc0e47a6c2f87c61a466f3478edee364e75576cbdbea136051f"
+    },
+    {
+      "source": "baselines/qwen/sft/data.py",
+      "module": "hrm_qwen.sft.data",
+      "source_sha256": "3937f59449064c4efa8f524295e44ef48a30ed2fe20c1fc2a6533d771593fae8"
+    },
+    {
+      "source": "baselines/llm_cot/train.py",
+      "module": "hrm_qwen.cot.train",
+      "source_sha256": "838d20b5e7317766cd61163c612d4e01b6f5ebab1d1029e345486205e6972a5c",
+      "changes": "namespaced imports, frozen input configuration/seed, opt-in W&B; original training objective and hyperparameters retained"
+    },
+    {
+      "source": "baselines/llm_rlvr/common.py",
+      "module": "hrm_qwen.cot.prompt",
+      "source_sha256": "7a77a0f97c5020de50f27aaa9af21c84e37f53c28b5bba996e44117224179ff5",
+      "changes": "extracted original row prompt functions; lazy line-prompt import"
+    },
+    {
+      "source": "baselines/llm_rlvr/diag.py",
+      "module": "hrm_qwen.cot.evaluate",
+      "source_sha256": "0fdeb5555899e29edd9babb75d92334ed4dfa44e1a1a605cb6a87164f06db5e8",
+      "changes": "recovered sampling/engine/metric protocol; new frozen preparation, pinned model, strict shard coverage and output hashes"
+    },
+    {
+      "source": "baselines/llm_rlvr/common.py",
+      "module": "hrm_qwen.cot.scoring",
+      "source_sha256": "7a77a0f97c5020de50f27aaa9af21c84e37f53c28b5bba996e44117224179ff5",
+      "changes": "original hint/data/grade/summary functions extracted; original parser/legality/augmentation functions copied from supplied sft and instruct modules to avoid model imports"
+    },
+    {
+      "source": "baselines/llm_cot/generate.py",
+      "module": "hrm_qwen.cot.generate",
+      "source_sha256": "8e88112c63b6a4a3029901dfffee128b25c40da0dbc37355db8493957c4dc99c",
+      "changes": "namespaced pure scoring/public data; prepare by default, frozen seed/config/data, source indices retained with variant IDs, bounded transport retries and process lock, four workers, cumulative reported-cost threshold"
+    },
+    {
+      "source": "baselines/llm_cot/repair.py",
+      "module": "hrm_qwen.cot.repair",
+      "source_sha256": "5f1bc76ff65ba9af858a7e2bffa1c038b17f83a6e5775ec9e55702b7c673bbb9",
+      "changes": "namespaced imports; frozen source/seed/config, offline preparation, four workers and bounded429 retries; process lock; reject invalid grid coordinates; preserved prefix-selection and final-answer grading"
+    }
+  ],
+  "current_files": {
+    "README.md": "5fc681a533ca2c2a8263f432bc50e8b1bbc512a9ade4ae52ec3ea15d7639ffa1",
+    "pyproject.toml": "773bbd1548ff1ef35a3e6d85b7f73a680b54149eeba9a245eb8246689b28a899",
+    "src/hrm_qwen/cot/evaluate.py": "428bd9c4c5581710d6a81cfecdcf1a39af1a6c074969bd34981df5affdbcfc4c",
+    "src/hrm_qwen/cot/generate.py": "4e1a33ec03accffafa1937fdedbdca6737af3c6d3114d76ccc27ad22b310b797",
+    "src/hrm_qwen/cot/generation_config.py": "d2c4d31e176af9a56b0e06baee6ebdbcef46f6d7a2642c6ccd50f6983e185114",
+    "src/hrm_qwen/cot/prompt.py": "1dfaf6c90a172408bdc666532a79aebce69fa0a712a177662052e44ceb0178a8",
+    "src/hrm_qwen/cot/ratings.py": "8b22e12a4678a61b3fdbba54d7ba88b39ed7aad0613f894a9f78768efa20d2e8",
+    "src/hrm_qwen/cot/repair.py": "63510142969f516414bdb4b889419bc7d26806d6b43530998c41ddf9f3b441dd",
+    "src/hrm_qwen/cot/repair_config.py": "e8a54fcb03eddabd425de11632c18edcdf53d0f011f25268adc4917f44fadfee",
+    "src/hrm_qwen/cot/run_config.py": "180150e60bd0898723099d5b6d8f2ec5b730ac26d0476f5f330e6c657f143e59",
+    "src/hrm_qwen/cot/scoring.py": "a51aaa6d2d37e3483ae1011131df1e4d6a39e8e03596b2f662d32c572de8eec8",
+    "src/hrm_qwen/cot/train.py": "a9df8ace76a8378fa01184a51cd05bd0ff5c0eb0606a097b5714c0edffd93641",
+    "src/hrm_qwen/instruct/rollout.py": "4c2c9c12f1db51147d22bb64a24832d18769f59608becb696fc682693d1d17a1",
+    "src/hrm_qwen/instruct/train.py": "31f48cc44dd266e86b761d0cd2fc9c0323d8c5e276b0482694421ed933a07128",
+    "src/hrm_qwen/sft/data.py": "222794e420cd3a98fe1dcb37ced32125f0060ff5bd95afe9efbb330283fde569",
+    "src/hrm_qwen/sft/eval.py": "79ee389188d12bb7f8be3f6028d652e49479254434e4ee9d508ebb4f7845e0d3",
+    "src/hrm_qwen/sft/prompt_eval.py": "853fa25df556b9d61d14484875dc1923392b2f8034542d5810fe0796482c96cd",
+    "src/hrm_qwen/sft/train.py": "1fa7b19f5373a6d6cf85fd7f3c7b87b467fd34899e9928b05269e3a18bca7030",
+    "tests/test_cot.py": "49c3e3a1a1b7f40b935a35447aed680024e13a730949af59212a1de1962a223b",
+    "tests/test_cot_evaluate.py": "9b6978188209000d2bf602a6395631f2365111a60740b5e4a882662ca3fe03b3",
+    "tests/test_cot_generate.py": "7e74235092d2baef46bb215dd2d0b63c7c6d6bbac1bac1abf2b11effedfd12d0",
+    "tests/test_cot_ratings.py": "47145e0f55dbe7fe8732d1cdb7c0045451e77859aa90b05b45f290d433550863",
+    "tests/test_cot_repair.py": "ba1aad7b84df7333ef7617398e217371ae1d84571a9713243f70c9679cc00b66",
+    "tests/test_public_data.py": "e8c4a1b15d5322ea28e511a6a2a190c4fcf7b27193ec6594bc74697c1627d55a",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "current_files_note": "SHA-256 of the current supplied files, excluding this manifest. The files/source_files fields retain historical source identities."
+}

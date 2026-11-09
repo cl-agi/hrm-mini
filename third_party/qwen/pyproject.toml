@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hrm-qwen"
+version = "0.1.0"
+license = {file = "LICENSE"}
+requires-python = ">=3.12"
+dependencies = ["hrm", "numpy", "requests"]
+
+[project.optional-dependencies]
+gpu = ["peft", "vllm", "wandb", "torch", "transformers", "datasets", "accelerate"]
+cot = ["liger-kernel"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true

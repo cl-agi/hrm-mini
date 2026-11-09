@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hrm"
+version = "0.1.0"
+license = {file = "LICENSE"}
+description = "HRM training, evaluation and analysis"
+requires-python = ">=3.12"
+dependencies = ["torch>=2.5", "numpy", "einops", "pydantic>=2", "PyYAML", "datasets", "huggingface_hub", "pyarrow", "hydra-core", "tqdm", "wandb", "coolname", "scipy", "pandas"]
+
+[project.scripts]
+hrm = "hrm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hrm", "hrm.*"]
+exclude = ["third_party*", "tests*"]
+
+[project.optional-dependencies]
+search = ["numba>=0.61"]

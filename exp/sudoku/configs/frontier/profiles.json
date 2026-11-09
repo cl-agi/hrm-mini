@@ -1,0 +1,225 @@
+{
+  "openai/gpt-5.2": {
+    "available": true,
+    "context_length": 400000,
+    "max_supported_output_tokens": 128000,
+    "call_settings": {
+      "max_completion_tokens": 128000,
+      "provider": {
+        "allow_fallbacks": false,
+        "only": [
+          "openai"
+        ]
+      },
+      "reasoning": {
+        "effort": "high",
+        "enabled": true
+      }
+    },
+    "expected_provider_names": [
+      "OpenAI"
+    ],
+    "historical_version": "gpt-5.2-20251211",
+    "expected_response_models": [
+      "openai/gpt-5.2",
+      "openai/gpt-5.2-20251211"
+    ],
+    "upstream_requirements": [
+      {
+        "accepted_values": [
+          128000
+        ],
+        "name": "output_limit",
+        "paths": [
+          "max_tokens",
+          "max_output_tokens",
+          "max_completion_tokens",
+          "generationConfig.maxOutputTokens",
+          "generation_config.max_output_tokens"
+        ]
+      },
+      {
+        "accepted_values": [
+          "high"
+        ],
+        "name": "reasoning_effort",
+        "paths": [
+          "reasoning.effort",
+          "reasoning_effort"
+        ]
+      }
+    ]
+  },
+  "google/gemini-3.1-pro-preview": {
+    "available": true,
+    "context_length": 1048576,
+    "max_supported_output_tokens": 65536,
+    "call_settings": {
+      "max_completion_tokens": 65536,
+      "provider": {
+        "allow_fallbacks": false,
+        "ignore": [
+          "google-vertex/global/flex",
+          "google-vertex/global/priority"
+        ],
+        "only": [
+          "google-vertex/global"
+        ],
+        "zdr": true
+      },
+      "reasoning": {
+        "effort": "high",
+        "enabled": true
+      }
+    },
+    "expected_provider_names": [
+      "Google"
+    ],
+    "historical_version": "gemini-3.1-pro-preview-20260219",
+    "expected_response_models": [
+      "google/gemini-3.1-pro-preview",
+      "google/gemini-3.1-pro-preview-20260219"
+    ],
+    "upstream_requirements": [
+      {
+        "accepted_values": [
+          65536
+        ],
+        "name": "output_limit",
+        "paths": [
+          "max_tokens",
+          "max_output_tokens",
+          "max_completion_tokens",
+          "generationConfig.maxOutputTokens",
+          "generation_config.max_output_tokens"
+        ]
+      },
+      {
+        "accepted_values": [
+          "high",
+          "HIGH"
+        ],
+        "name": "reasoning_effort",
+        "paths": [
+          "generationConfig.thinkingConfig.thinkingLevel",
+          "generation_config.thinking_config.thinking_level",
+          "reasoning_effort"
+        ]
+      }
+    ]
+  },
+  "anthropic/claude-opus-4.5": {
+    "available": true,
+    "context_length": 200000,
+    "max_supported_output_tokens": 64000,
+    "call_settings": {
+      "max_completion_tokens": 64000,
+      "provider": {
+        "allow_fallbacks": false,
+        "ignore": [
+          "amazon-bedrock/eu-west-1"
+        ],
+        "only": [
+          "amazon-bedrock"
+        ],
+        "zdr": true
+      },
+      "reasoning": {
+        "effort": "high",
+        "enabled": true
+      }
+    },
+    "expected_provider_names": [
+      "Amazon Bedrock"
+    ],
+    "historical_version": "claude-4.5-opus-20251124",
+    "expected_response_models": [
+      "anthropic/claude-opus-4.5",
+      "anthropic/claude-4.5-opus-20251124"
+    ],
+    "upstream_requirements": [
+      {
+        "accepted_values": [
+          64000
+        ],
+        "name": "output_limit",
+        "paths": [
+          "max_tokens",
+          "max_output_tokens",
+          "max_completion_tokens",
+          "generationConfig.maxOutputTokens",
+          "generation_config.max_output_tokens"
+        ]
+      },
+      {
+        "accepted_values": [
+          "enabled"
+        ],
+        "name": "thinking_enabled",
+        "paths": [
+          "thinking.type"
+        ]
+      },
+      {
+        "accepted_values": [
+          51200
+        ],
+        "name": "thinking_budget",
+        "paths": [
+          "thinking.budget_tokens"
+        ]
+      }
+    ]
+  },
+  "deepseek/deepseek-v3.2": {
+    "available": true,
+    "context_length": 163840,
+    "max_supported_output_tokens": 128000,
+    "call_settings": {
+      "max_completion_tokens": 128000,
+      "provider": {
+        "allow_fallbacks": false,
+        "only": [
+          "digitalocean"
+        ]
+      },
+      "reasoning": {
+        "effort": "high",
+        "enabled": true
+      }
+    },
+    "expected_provider_names": [
+      "DigitalOcean"
+    ],
+    "historical_version": "deepseek-v3.2-20251201",
+    "expected_response_models": [
+      "deepseek/deepseek-v3.2",
+      "deepseek/deepseek-v3.2-20251201"
+    ],
+    "upstream_requirements": [
+      {
+        "accepted_values": [
+          128000
+        ],
+        "name": "output_limit",
+        "paths": [
+          "max_tokens",
+          "max_output_tokens",
+          "max_completion_tokens",
+          "generationConfig.maxOutputTokens",
+          "generation_config.max_output_tokens"
+        ]
+      },
+      {
+        "accepted_values": [
+          true
+        ],
+        "name": "thinking_enabled",
+        "paths": [
+          "chat_template_kwargs.enable_thinking",
+          "enable_thinking"
+        ]
+      }
+    ]
+  }
+}

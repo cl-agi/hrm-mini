@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "name": "SAT constraint readout and matched interventions",
+  "status": "ready",
+  "checkpoint": {
+    "path": null,
+    "key": "model",
+    "sha256": null
+  },
+  "data": {
+    "train": 219,
+    "valid": 108,
+    "test": 108,
+    "root": null,
+    "n_vars": 1024,
+    "n_clauses": 4362,
+    "intervention_split": "test",
+    "intervention_count": 108,
+    "test_shared_between_probe_and_intervention": true
+  },
+  "trajectory": {
+    "starts_per_case": 1,
+    "outer_cycles": 64,
+    "record_at": "after_each_outer",
+    "retain_solved_and_unsolved": true,
+    "input_seed_base": 801000,
+    "readout": "native_H_lm_head_positive_literal_positions",
+    "no_target_input": true,
+    "features": "mean_over_all_tokens_float32",
+    "feature_dim": 512
+  },
+  "probe": {
+    "modules": [
+      "H",
+      "L"
+    ],
+    "target": "clauses_with_no_satisfied_literal",
+    "invalid_token_rule": "0 and 3 satisfy neither positive nor negative literal; record legality separately",
+    "fit": "ridge_with_intercept",
+    "alphas": [
+      1e-06,
+      3.162277660168379e-06,
+      1e-05,
+      3.1622776601683795e-05,
+      0.0001,
+      0.00031622776601683794,
+      0.001,
+      0.0031622776601683794,
+      0.01,
+      0.03162277660168379,
+      0.1,
+      0.31622776601683794,
+      1.0,
+      3.1622776601683795,
+      10.0,
+      31.622776601683793,
+      100.0,
+      316.22776601683796,
+      1000.0,
+      3162.2776601683795,
+      10000.0
+    ],
+    "selection": "lowest_validation_MSE",
+    "refit_on_valid": false
+  },
+  "intervention": {
+    "modules": [
+      "H",
+      "L"
+    ],
+    "fork_after_h_update": 4,
+    "fork_after_outer": 2,
+    "signed_relative_displacements": [
+      -0.03,
+      -0.01,
+      -0.002,
+      0.002,
+      0.01,
+      0.03
+    ],
+    "random_controls_per_absolute_dose": 8,
+    "four_direction_seed_base": 20261018,
+    "random_control_seeds": [
+      20261018,
+      20261019,
+      20261020,
+      20261021
+    ],
+    "share_controls_between_positive_negative_same_magnitude": true,
+    "direction": "training_covariance_preconditioned_token_tangent",
+    "control": "token_norm_and_linear_probe_projection_preserving_rotation",
+    "continue_through_outer": 64,
+    "primary_endpoint": "first_post_intervention_L_delta_l2",
+    "secondary_endpoints": [
+      "L_H_delta_l2_and_rms_timecourse",
+      "actual_clause_violations",
+      "legal_assignment",
+      "success_any_continuation",
+      "success_final_outer"
+    ],
+    "failed_geometry_policy": "save_audit_and_stop_without_dropping_cases"
+  },
+  "statistics": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20261018,
+    "confidence": 0.95,
+    "independent_unit": "puzzle",
+    "probe_metrics": [
+      "pearson",
+      "r2",
+      "rmse"
+    ],
+    "paired_effect": "critic_minus_mean_of_eight_matched_random_controls",
+    "primary_test": "paired_t_test_across_puzzles",
+    "multiplicity": "Holm_six_doses_separately_per_H_or_L_for_primary_endpoint",
+    "secondary_endpoints": "descriptive_paired_effect_and_cluster_interval"
+  },
+  "execution": {
+    "forward_dtype": "float32",
+    "mode": "eager_native_forward_with_readonly_hooks",
+    "batch_size": 1,
+    "launch_when_preflight_passes": true,
+    "tf32": false,
+    "autocast": false
+  },
+  "precision": {
+    "status": "requires_preflight",
+    "engineering_tolerances": {
+      "token_norm_relative": 2e-06,
+      "relative_chord_absolute": 2e-07,
+      "control_probe_absolute": 0.0002,
+      "control_probe_normalized": 0.0002
+    },
+    "formal_tolerances": {
+      "token_norm_relative": 2e-06,
+      "relative_chord_absolute": 2e-07,
+      "control_probe_absolute": 0.0002,
+      "control_probe_normalized": 0.0002
+    }
+  }
+}

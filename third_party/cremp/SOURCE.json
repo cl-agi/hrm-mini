@@ -1,0 +1,141 @@
+{
+  "repository": null,
+  "base_commit": null,
+  "distribution": "vendored adapted snapshot",
+  "notice": "No historical upstream commit is asserted. The files mapping identifies the initial supplied snapshot; subsequent adaptations may differ from those hashes.",
+  "files": {
+    "README.md": "b9341893227350d31ea0c0181927022754b4cdf18cbd86d20c0a95b5cde57f0d",
+    "pyproject.toml": "243ced4de276ee8a808955f972a924f1e4bc9f43bed011bd10cab3e65b6a9f3a",
+    "src/hrm_cremp/angle_data.py": "7257d032f35d53e3b850d15a4c210df63d7e52ec725d5c65b524517fb9820d74",
+    "src/hrm_cremp/angle_diffusion.py": "3bf6ad62885af96d72637b6d3a9caa71f259e477ece21dd4166a4f008b91ca05",
+    "src/hrm_cremp/angle_model.py": "2b7b2194c75c12c0c5a54a233b8a40ee1a3ba2d378f3dc4ea4a9819abf91014d",
+    "src/hrm_cremp/arch/hrm_flow_bias.py": "7231e7ae27699e144fbf9b46b79457cdcb6b5fc481cb4f795650f681a30bffc9",
+    "src/hrm_cremp/arch/layers.py": "9f0ed0fa67d5759a2c0a096773f5ad7e14647b8e208b868d471f4e7b63e562ec",
+    "src/hrm_cremp/arch/rt_flow_bias.py": "139f43834342d38f2613e8a98568c6e38d03655141f634804353072330300a41",
+    "src/hrm_cremp/cyclic_augmentation.py": "2ff89239a109f78d89544d6b79f5aba5e45851d1346812d8d64edbc2516c930f",
+    "src/hrm_cremp/generate_angles.py": "267602f85ebf99a58d3f65091ecbcf90708871c24d8748187db8e3b7c2afaa35",
+    "src/hrm_cremp/gpu_smoke.py": "1791dc0b410899d9414ac93b4a94b36f88834bd424a92278577db6ef84f2e402",
+    "src/hrm_cremp/isolation_gate.py": "d7df52c85be35d67b810148704183c677ed4ade19c73c22bfca32d1d1ca2b47e",
+    "src/hrm_cremp/isolation_gate_v1.py": "f96d2f9b44402aecbe33ef556da9809cec9224c833bf463ec5ef2b70e222c410",
+    "src/hrm_cremp/project_angles.py": "e7dd77090588aa0408aedd5b08188f52c4e22b2e50648e3b454b164fd0cb982e",
+    "src/hrm_cremp/resume_state.py": "da517705828adac0e72b28f74580cff62df7bb9432f8647d1953f9b90f960c49",
+    "src/hrm_cremp/ringer_support.py": "fa06b111b61c27ad2260d826f1007bcefa1fda391c5f8b279bcd8f75e0268f8d",
+    "src/hrm_cremp/train_angles.py": "e02a009f89512f588522014dffc38dd402819a2b5231b44b98cd8ace0e284562",
+    "src/hrm_cremp/vendor/ringer/scripts/reconstruct_single.py": "778feebb5aad52b1770d6046960d107537ab39f4c9111a24cf30c61fc56c4312",
+    "src/hrm_cremp/vendor/ringer/scripts/reject_samples.py": "489affbc9d29ee8cc225ae7d3217cec24c33148867a6f25ff8043037a1710a44",
+    "src/hrm_cremp/vendor/ringer/setup.py": "9d55742a36ff6c0c0293ec17f6098fd709b77591cc3993c8c1cfd5b35d3dc25f"
+  },
+  "source_files": [
+    {
+      "source": "cremp/neural/angle_model.py",
+      "module": "hrm_cremp.angle_model",
+      "source_sha256": "8fafd1f2cc82ee8deabfecaad2c01638c5be1d930e82bfc145f1c0405ec1144d"
+    },
+    {
+      "source": "cremp/neural/generate_angles.py",
+      "module": "hrm_cremp.generate_angles",
+      "source_sha256": "c28f06923a2192a8ea77c478d7c23177ac9b4044c48f05c62ca9fa77e722ea82"
+    },
+    {
+      "source": "cremp/neural/resume_state.py",
+      "module": "hrm_cremp.resume_state",
+      "source_sha256": "da517705828adac0e72b28f74580cff62df7bb9432f8647d1953f9b90f960c49"
+    },
+    {
+      "source": "cremp/neural/train_angles.py",
+      "module": "hrm_cremp.train_angles",
+      "source_sha256": "946d5801abfa0bd811510324d0885c0c25b273770e756ac473096790bde57ede"
+    },
+    {
+      "source": "cremp/neural/project_angles.py",
+      "module": "hrm_cremp.project_angles",
+      "source_sha256": "54907ae8f4b97e7ebdd849ec09586fd4bb8f868167492cf222355d02018f28c0"
+    },
+    {
+      "source": "cremp/neural/isolation_gate_v1.py",
+      "module": "hrm_cremp.isolation_gate_v1",
+      "source_sha256": "81ed6d214213b940cb9e29e7c8011eb57657d62098badca8b93f4ac519518f77"
+    },
+    {
+      "source": "cremp/neural/angle_data.py",
+      "module": "hrm_cremp.angle_data",
+      "source_sha256": "bc632a02d48d5594db995f854893d236ec22f9a9ce4101f2dfe70153c5bb894c"
+    },
+    {
+      "source": "cremp/neural/ringer_support.py",
+      "module": "hrm_cremp.ringer_support",
+      "source_sha256": "085c00d149745839716dcebb2cc06a46222abea2467c245fffaaf5f5708c67c7"
+    },
+    {
+      "source": "cremp/neural/angle_diffusion.py",
+      "module": "hrm_cremp.angle_diffusion",
+      "source_sha256": "ac0ce08b692ccf4a931c8f229794d5f6025fd13d9675582c63ebc9f168067df2"
+    },
+    {
+      "source": "cremp/neural/isolation_gate.py",
+      "module": "hrm_cremp.isolation_gate",
+      "source_sha256": "78d17981c854da383dcb50843b9f7457423ecf6a03da6edd5379a094cfecc425"
+    },
+    {
+      "source": "cremp/neural/gpu_smoke.py",
+      "module": "hrm_cremp.gpu_smoke",
+      "source_sha256": "676f90f087b0a29d58fbaa39d5482909b2deaf9fb97d2aaf3423175af05ce2e5"
+    },
+    {
+      "source": "cremp/neural/cyclic_augmentation.py",
+      "module": "hrm_cremp.cyclic_augmentation",
+      "source_sha256": "e19fe22ae393f1ae5f04766a12bc1a7bd20cbbd9c820bdb67aba015bf8bde9a3"
+    },
+    {
+      "source": "cremp/neural/arch/rt_flow_bias.py",
+      "module": "hrm_cremp.arch.rt_flow_bias",
+      "source_sha256": "b0d9d780a4d00b977c022669d76e9af018caa546d021e0c3d125c9a5049d7f90"
+    },
+    {
+      "source": "cremp/neural/arch/layers.py",
+      "module": "hrm_cremp.arch.layers",
+      "source_sha256": "9f0ed0fa67d5759a2c0a096773f5ad7e14647b8e208b868d471f4e7b63e562ec"
+    },
+    {
+      "source": "cremp/neural/arch/hrm_flow_bias.py",
+      "module": "hrm_cremp.arch.hrm_flow_bias",
+      "source_sha256": "21835680a849f590a4093a709f2abaf76378daa00e9dfe34ac9ffc74520972ae"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/setup.py",
+      "module": "hrm_cremp.vendor.ringer.setup",
+      "source_sha256": "9d55742a36ff6c0c0293ec17f6098fd709b77591cc3993c8c1cfd5b35d3dc25f"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/scripts/reject_samples.py",
+      "module": "hrm_cremp.vendor.ringer.scripts.reject_samples",
+      "source_sha256": "489affbc9d29ee8cc225ae7d3217cec24c33148867a6f25ff8043037a1710a44"
+    },
+    {
+      "source": "cremp/neural/vendor/ringer/scripts/reconstruct_single.py",
+      "module": "hrm_cremp.vendor.ringer.scripts.reconstruct_single",
+      "source_sha256": "3b125db52fd15a46c339155758b21f65beac8a058da2e40b5c0aaed5af4ee00f"
+    }
+  ],
+  "current_files": {
+    "LICENSE-RINGER": "a0987cf5b7a7f0af053e3fc8c0f9748d24198c6e8a3335b2a679d167cb2dcc78",
+    "README.md": "0b5f07e50e772b65f1e786890a01bb452a32c5ec2d7f22961e93ef2a538b71f8",
+    "pyproject.toml": "c6101fc5222e7829ef016382211c8f0574de5dc233b9b649f8396abddcf69196",
+    "src/hrm_cremp/angle_data.py": "7257d032f35d53e3b850d15a4c210df63d7e52ec725d5c65b524517fb9820d74",
+    "src/hrm_cremp/angle_diffusion.py": "3bf6ad62885af96d72637b6d3a9caa71f259e477ece21dd4166a4f008b91ca05",
+    "src/hrm_cremp/angle_model.py": "2b7b2194c75c12c0c5a54a233b8a40ee1a3ba2d378f3dc4ea4a9819abf91014d",
+    "src/hrm_cremp/arch/hrm_flow_bias.py": "7231e7ae27699e144fbf9b46b79457cdcb6b5fc481cb4f795650f681a30bffc9",
+    "src/hrm_cremp/arch/layers.py": "9f0ed0fa67d5759a2c0a096773f5ad7e14647b8e208b868d471f4e7b63e562ec",
+    "src/hrm_cremp/arch/rt_flow_bias.py": "139f43834342d38f2613e8a98568c6e38d03655141f634804353072330300a41",
+    "src/hrm_cremp/cyclic_augmentation.py": "2ff89239a109f78d89544d6b79f5aba5e45851d1346812d8d64edbc2516c930f",
+    "src/hrm_cremp/generate_angles.py": "9feae74dbfa7e0fced47fe3bd089ffe98a05441007d169cb104ed67413f0c6e0",
+    "src/hrm_cremp/gpu_smoke.py": "1791dc0b410899d9414ac93b4a94b36f88834bd424a92278577db6ef84f2e402",
+    "src/hrm_cremp/isolation_gate.py": "17860d77897476eb4f5fe784138bba7877c49b87ccdb7fdfa23b6b020cfaf9fc",
+    "src/hrm_cremp/project_angles.py": "e02bd3e629fc49c060a7c60c025e87b3cda0a639c276f4cf4ee13a8b4ff5e54e",
+    "src/hrm_cremp/resume_state.py": "da517705828adac0e72b28f74580cff62df7bb9432f8647d1953f9b90f960c49",
+    "src/hrm_cremp/ringer_support.py": "fa06b111b61c27ad2260d826f1007bcefa1fda391c5f8b279bcd8f75e0268f8d",
+    "src/hrm_cremp/train_angles.py": "5ea11b0c7fe1e8fdb8368d6a3e084cdd9f7f3aeac35f423227b1fbc111f401b7",
+    "src/hrm_cremp/vendor/ringer/ringer/sidechain_reconstruction/data/reconstruction_data.pickle": "42175f5b9c8f55708bd26373c7f4eacb35f4652c4fa3b475ebb3a6ca7be756bb"
+  },
+  "current_files_note": "SHA-256 of the current supplied files, excluding this manifest. The files/source_files fields retain historical source identities."
+}
